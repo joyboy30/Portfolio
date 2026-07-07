@@ -44,6 +44,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+
+  // Google Search Console Verification
+  verification: {
+    google: "ggFCVRED77Nke9kkUQexr1HqC2RluDtXlKG3q6aYYiE",
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -55,6 +61,7 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -71,6 +78,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
@@ -87,7 +95,10 @@ export default function RootLayout({
   const jsonLd = [personSchema(), websiteSchema(), organizationSchema()];
 
   return (
-    <html lang="en" className={`${sora.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      className={`${sora.variable} ${manrope.variable} ${jetbrainsMono.variable}`}
+    >
       <body className="bg-background font-sans text-foreground antialiased selection:bg-accent/30 selection:text-white">
         <a
           href="#main-content"
@@ -95,7 +106,9 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
+
         {children}
+
         {jsonLd.map((schema, i) => (
           <script
             key={i}
