@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Igel G. Cudiera",
-  title: "Igel Cudiera — SEO, Google Ads, Meta Ads & Digital Marketing Specialist",
+  title: "SEO Specialist PH | On-Page, Technical, Local, AEO & GEO",
   shortTitle: "Igel Cudiera | SEO & Digital Marketing Specialist",
   description:
-    "Igel G. Cudiera is a results-driven SEO, Google Ads, Meta Ads, and Digital Marketing Specialist based in Cebu, Philippines, with 3+ years of experience improving organic rankings, traffic, and conversions for e-commerce, dental, real estate, business brokerage, and iGaming brands. Specializing in Technical SEO, Local SEO, Website Optimization, Core Web Vitals, Google Ads, Meta Ads, AI Content Creation, and next-generation AI Search Optimization (AIO/AEO/GEO).",
+    "Results-driven SEO Specialist in the Philippines with 3+ years' experience in Technical, On-Page, Off-Page, Local SEO, AIO, AEO & GEO strategies.",
   // Replace with your real Vercel URL after first deploy, then with a custom
   // domain once you own one. This single constant drives metadata, the
   // sitemap, robots.txt, canonical URLs, Open Graph, and JSON-LD.
