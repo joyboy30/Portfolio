@@ -667,8 +667,8 @@ export function CaseStudies() {
     ChatGPT Search, and other generative search platforms.
 
   </p>
-
-</div>
+  </div> {/* Portfolio Highlights */}
+</div> {/* End AI Search Visibility Case Studies */}
         <div className="space-y-5">
           {caseStudies.map((cs, i) => {
             const isOpen = openIndex === i;
