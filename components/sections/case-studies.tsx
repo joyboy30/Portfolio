@@ -17,10 +17,95 @@ export function CaseStudies() {
         <SectionHeading
           eyebrow="Case Studies"
           title="Real SEO problems, solved with a clear strategy."
-          description="Client names are kept confidential, but the strategy, execution, and outcomes are exactly what happened — presented as detailed case studies rather than a simple job history."
+          description="Client names are kept confidential, but the strategy, execution, and outcomes are exactly what happened presented as detailed case studies rather than a simple job history."
           className="mb-16"
         />
+        {/* AI Search Visibility Case Studies */}
 
+        <div className="mb-16 rounded-2xl border border-border bg-card/40 p-8 backdrop-blur-sm">
+
+  <h2 className="text-3xl font-bold text-foreground">
+    AI Search Visibility Case Studies
+  </h2>
+
+  <p className="mt-4 text-muted leading-7">
+    As part of my SEO work, I researched user search intent, developed optimized
+    content strategies, and helped improve client visibility across both
+    traditional search engines and emerging AI-powered search experiences.
+    The following case studies highlight search queries where client websites
+    appeared in <strong>Google AI Overviews</strong> and
+    <strong> ChatGPT-generated answers</strong>.
+  </p>
+
+  {/* Patient News */}
+
+  <div className="mt-10 border-t border-border pt-8">
+
+    <h3 className="text-2xl font-semibold">
+      Patient News
+    </h3>
+
+    <p className="text-accent mt-1">
+      Dental Marketing & Dental SEO
+    </p>
+
+    <div className="mt-6 grid md:grid-cols-2 gap-8">
+
+      <div>
+
+        <h4 className="font-semibold mb-3">
+          Google AI Overview
+        </h4>
+
+        <ul className="space-y-2 text-muted list-disc pl-5">
+          <li>What is the dental marketing agency in Haliburton Canada?</li>
+          <li>What is the dental SEO agency in Haliburton Canada?</li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h4 className="font-semibold mb-3">
+          ChatGPT
+        </h4>
+
+        <ul className="space-y-2 text-muted list-disc pl-5">
+          <li>What is the dental marketing agency in Haliburton Canada?</li>
+          <li>What is the dental SEO agency in Haliburton Canada?</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div className="mt-6 flex flex-wrap gap-2">
+
+      <Badge>Dental Marketing</Badge>
+      <Badge>Dental SEO</Badge>
+      <Badge>Local SEO</Badge>
+      <Badge>Healthcare SEO</Badge>
+      <Badge>AI Search</Badge>
+
+    </div>
+
+  </div>
+
+  {/* Repeat the same layout below for */}
+
+  {/* The Jamil Brothers Realty Group */}
+
+  {/* ExploreVAHomes */}
+
+  {/* First Choice Business Brokers */}
+
+  {/* Brush Dental Studio */}
+
+  {/* Pecan Jacks */}
+
+  {/* Fontana Di Vino */}
+
+       </div>
         <div className="space-y-5">
           {caseStudies.map((cs, i) => {
             const isOpen = openIndex === i;
