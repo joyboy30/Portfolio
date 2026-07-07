@@ -7,7 +7,7 @@ export const siteConfig = {
   // Replace with your real Vercel URL after first deploy, then with a custom
   // domain once you own one. This single constant drives metadata, the
   // sitemap, robots.txt, canonical URLs, Open Graph, and JSON-LD.
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://igelcudiera-portfolio.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://igel-cudiera-portfolio.vercel.app",
   location: "Medellin, Cebu, Philippines",
   email: "igel.cudiera31@gmail.com",
   phone: "+639196098689",
