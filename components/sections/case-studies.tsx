@@ -17,7 +17,7 @@ export function CaseStudies() {
         <SectionHeading
           eyebrow="Case Studies"
           title="Real SEO problems, solved with a clear strategy."
-          description="Client names are kept confidential, but the strategy, execution, and outcomes are exactly what happened presented as detailed case studies rather than a simple job history."
+          description="These case studies showcase real SEO projects, highlighting the strategies, implementation, and measurable results achieved through keyword research, on-page SEO, technical SEO, off-page SEO, content strategy, local SEO, and AI search optimization."
           className="mb-16"
         />
         {/* AI Search Visibility Case Studies */}
