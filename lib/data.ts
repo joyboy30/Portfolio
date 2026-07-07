@@ -100,7 +100,7 @@ export const skillGroups = [
     icon: "Wand2",
     skills: [
       "AI Ad Creative (Canva+Gemini)",
-      "AI Copywriting (Claude AI)",
+      "AI Content Writing (Claude AI)",
       "Graphic Design",
     ],
   },
