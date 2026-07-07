@@ -37,75 +37,638 @@ export function CaseStudies() {
     <strong> ChatGPT-generated answers</strong>.
   </p>
 
-  {/* Patient News */}
+        {/* ===========================
+    Patient News
+=========================== */}
 
-  <div className="mt-10 border-t border-border pt-8">
+<div className="mt-10 border-t border-border pt-8">
+  <h3 className="text-3xl font-bold text-foreground">
+    Patient News
+  </h3>
 
-    <h3 className="text-2xl font-semibold">
-      Patient News
-    </h3>
+  <p className="mt-2 text-accent font-medium">
+    Dental Marketing & Dental SEO
+  </p>
 
-    <p className="text-accent mt-1">
-      Dental Marketing & Dental SEO
-    </p>
+  <div className="mt-8 grid gap-10 lg:grid-cols-2">
+    <div>
+      <h4 className="text-lg font-semibold mb-4">
+        Google AI Overview
+      </h4>
 
-    <div className="mt-6 grid md:grid-cols-2 gap-8">
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+        <li>What is the dental marketing agency in Haliburton Canada?</li>
+        <li>What is the dental SEO agency in Haliburton Canada?</li>
+      </ul>
+    </div>
 
-      <div>
+    <div>
+      <h4 className="text-lg font-semibold mb-4">
+        ChatGPT
+      </h4>
 
-        <h4 className="font-semibold mb-3">
-          Google AI Overview
-        </h4>
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+        <li>What is the dental marketing agency in Haliburton Canada?</li>
+        <li>What is the dental SEO agency in Haliburton Canada?</li>
+      </ul>
+    </div>
+  </div>
 
-        <ul className="space-y-2 text-muted list-disc pl-5">
-          <li>What is the dental marketing agency in Haliburton Canada?</li>
-          <li>What is the dental SEO agency in Haliburton Canada?</li>
-        </ul>
+  <h4 className="mt-8 mb-3 font-semibold">
+    SEO Focus
+  </h4>
 
-      </div>
+  <div className="flex flex-wrap gap-2">
+    <Badge>Dental Marketing</Badge>
+    <Badge>Dental SEO</Badge>
+    <Badge>Local SEO</Badge>
+    <Badge>Informational Search Intent</Badge>
+    <Badge>Healthcare Content Optimization</Badge>
+  </div>
+</div>
 
-      <div>
+{/* ===========================
+    The Jamil Brothers Realty Group
+=========================== */}
 
-        <h4 className="font-semibold mb-3">
-          ChatGPT
-        </h4>
+<div className="mt-14 border-t border-border pt-10">
 
-        <ul className="space-y-2 text-muted list-disc pl-5">
-          <li>What is the dental marketing agency in Haliburton Canada?</li>
-          <li>What is the dental SEO agency in Haliburton Canada?</li>
-        </ul>
+  <h3 className="text-3xl font-bold text-foreground">
+    The Jamil Brothers Realty Group
+  </h3>
 
-      </div>
+  <p className="mt-2 text-accent font-medium">
+    Residential Real Estate
+  </p>
+
+  <div className="mt-8 grid gap-10 lg:grid-cols-2">
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        Google AI Overview
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>How to sell a home in Fairfax County</li>
+
+        <li>What is the cost in selling a home in West Virginia?</li>
+
+        <li>How Do You Sell a Home in Columbia, MD?</li>
+
+        <li>Are Sellers More Willing to Negotiate in Northern Virginia?</li>
+
+        <li>Is It Harder to Sell a Townhouse or Single-Family Home in Prince William County?</li>
+
+        <li>How Do You Sell a House That Needs Repairs in West Virginia?</li>
+
+        <li>When Is the Best Time to Sell a House in Baltimore County, MD?</li>
+
+        <li>How Much Does Selling a House in Loudoun County Really Cost?</li>
+
+      </ul>
 
     </div>
 
-    <div className="mt-6 flex flex-wrap gap-2">
+    <div>
 
-      <Badge>Dental Marketing</Badge>
-      <Badge>Dental SEO</Badge>
-      <Badge>Local SEO</Badge>
-      <Badge>Healthcare SEO</Badge>
-      <Badge>AI Search</Badge>
+      <h4 className="text-lg font-semibold mb-4">
+        ChatGPT
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>How to sell a home in Fairfax County</li>
+
+        <li>What is the cost in selling a home in West Virginia?</li>
+
+        <li>How Do You Sell a Home in Columbia, MD?</li>
+
+        <li>Are Sellers More Willing to Negotiate in Northern Virginia?</li>
+
+        <li>Is It Harder to Sell a Townhouse or Single-Family Home in Prince William County?</li>
+
+        <li>When Is the Best Time to Sell a House in Baltimore County, MD?</li>
+
+        <li>How Much Does Selling a House in Loudoun County Really Cost?</li>
+
+      </ul>
 
     </div>
 
   </div>
 
-  {/* Repeat the same layout below for */}
+  <h4 className="mt-8 mb-3 font-semibold">
+    SEO Focus
+  </h4>
 
-  {/* The Jamil Brothers Realty Group */}
+  <div className="flex flex-wrap gap-2">
 
-  {/* ExploreVAHomes */}
+    <Badge>Local Real Estate SEO</Badge>
 
-  {/* First Choice Business Brokers */}
+    <Badge>Seller Intent Keywords</Badge>
 
-  {/* Brush Dental Studio */}
+    <Badge>Long-Tail Keyword Research</Badge>
 
-  {/* Pecan Jacks */}
+    <Badge>Informational Content Strategy</Badge>
 
-  {/* Fontana Di Vino */}
+    <Badge>AI Search Optimization</Badge>
 
-       </div>
+  </div>
+
+</div>
+{/* ===========================
+    The Jamil Brothers Realty Group & ExploreVAHomes
+=========================== */}
+
+<div className="mt-14 border-t border-border pt-10">
+
+  <h3 className="text-3xl font-bold text-foreground">
+    The Jamil Brothers Realty Group &amp; ExploreVAHomes
+  </h3>
+
+  <p className="mt-2 text-accent font-medium">
+    Residential Real Estate
+  </p>
+
+  <div className="mt-8 grid gap-10 lg:grid-cols-2">
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        Google AI Overview
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>How Do You Sell an Investment Property in Fairfax and Minimize Taxes?</li>
+
+      </ul>
+
+    </div>
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        ChatGPT
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>How Do You Sell an Investment Property in Fairfax and Minimize Taxes?</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <h4 className="mt-8 mb-3 font-semibold">
+    SEO Focus
+  </h4>
+
+  <div className="flex flex-wrap gap-2">
+
+    <Badge>Investment Property SEO</Badge>
+
+    <Badge>Tax-Related Content</Badge>
+
+    <Badge>Long-Tail Search Optimization</Badge>
+
+    <Badge>Local Real Estate Marketing</Badge>
+
+    <Badge>AI Search Visibility</Badge>
+
+  </div>
+
+</div>
+
+{/* ===========================
+    First Choice Business Brokers
+=========================== */}
+
+<div className="mt-14 border-t border-border pt-10">
+
+  <h3 className="text-3xl font-bold text-foreground">
+    First Choice Business Brokers
+  </h3>
+
+  <p className="mt-2 text-accent font-medium">
+    Business Brokerage
+  </p>
+
+  <div className="mt-8 grid gap-10 lg:grid-cols-2">
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        Google AI Overview
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>How do I sell my business in Los Angeles?</li>
+
+        <li>How do I connect with business buyers in Los Angeles?</li>
+
+        <li>What is the best way to sell a small business in Los Angeles?</li>
+
+        <li>How do I sell my business in Las Vegas?</li>
+
+        <li>How can I find a buyer for my business in Atlanta, GA?</li>
+
+      </ul>
+
+    </div>
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        ChatGPT
+      </h4>
+
+      <div className="rounded-lg border border-dashed border-border p-6 text-muted text-sm leading-7">
+
+        These business brokerage queries were cited in
+        <span className="font-semibold text-foreground"> Google AI Overviews</span>.
+        While this project focused primarily on Google AI visibility, the SEO
+        strategy emphasized buyer-intent content, long-tail keyword targeting,
+        and location-specific optimization designed for modern AI-powered search
+        experiences.
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <h4 className="mt-8 mb-3 font-semibold">
+    SEO Focus
+  </h4>
+
+  <div className="flex flex-wrap gap-2">
+
+    <Badge>Business Brokerage SEO</Badge>
+
+    <Badge>Buyer Intent</Badge>
+
+    <Badge>Seller Intent</Badge>
+
+    <Badge>Commercial SEO</Badge>
+
+    <Badge>Location-Based SEO</Badge>
+
+    <Badge>Long-Tail Keywords</Badge>
+
+    <Badge>AI Search Optimization</Badge>
+
+  </div>
+
+</div>
+{/* ===========================
+    Brush Dental Studio
+=========================== */}
+
+<div className="mt-14 border-t border-border pt-10">
+
+  <h3 className="text-3xl font-bold text-foreground">
+    Brush Dental Studio
+  </h3>
+
+  <p className="mt-2 text-accent font-medium">
+    Local Dental Practice
+  </p>
+
+  <div className="mt-8 grid gap-10 lg:grid-cols-2">
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        Google AI Overview
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>Dentist in Saint Bonifacius, MN</li>
+
+        <li>How much does a dental cleaning cost in Saint Bonifacius, MN?</li>
+
+      </ul>
+
+    </div>
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        ChatGPT
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>Dentist in Saint Bonifacius, MN</li>
+
+        <li>How much does a dental cleaning cost in Saint Bonifacius, MN?</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <h4 className="mt-8 mb-3 font-semibold">
+    SEO Focus
+  </h4>
+
+  <div className="flex flex-wrap gap-2">
+
+    <Badge>Local SEO</Badge>
+
+    <Badge>Dental Service Pages</Badge>
+
+    <Badge>Service Pricing Content</Badge>
+
+    <Badge>Location-Based SEO</Badge>
+
+    <Badge>AI Search Visibility</Badge>
+
+  </div>
+
+</div>
+
+{/* ===========================
+    Pecan Jacks
+=========================== */}
+
+<div className="mt-14 border-t border-border pt-10">
+
+  <h3 className="text-3xl font-bold text-foreground">
+    Pecan Jacks
+  </h3>
+
+  <p className="mt-2 text-accent font-medium">
+    Restaurant & Dessert Shop
+  </p>
+
+  <div className="mt-8 grid gap-10 lg:grid-cols-2">
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        Google AI Overview
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>What are the best gourmet desserts to try in Grayton Beach?</li>
+
+        <li>What is the best ice cream in Grayton Beach?</li>
+
+      </ul>
+
+    </div>
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        ChatGPT
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>What are the best gourmet desserts to try in Grayton Beach?</li>
+
+        <li>What is the best ice cream in Grayton Beach?</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <h4 className="mt-8 mb-3 font-semibold">
+    SEO Focus
+  </h4>
+
+  <div className="flex flex-wrap gap-2">
+
+    <Badge>Restaurant SEO</Badge>
+
+    <Badge>Local Discovery Searches</Badge>
+
+    <Badge>"Best Of" Search Queries</Badge>
+
+    <Badge>Food & Hospitality SEO</Badge>
+
+    <Badge>AI Search Visibility</Badge>
+
+  </div>
+
+</div>
+
+{/* ===========================
+    Fontana Di Vino
+=========================== */}
+
+<div className="mt-14 border-t border-border pt-10">
+
+  <h3 className="text-3xl font-bold text-foreground">
+    Fontana Di Vino
+  </h3>
+
+  <p className="mt-2 text-accent font-medium">
+    Italian Restaurant
+  </p>
+
+  <div className="mt-8 grid gap-10 lg:grid-cols-2">
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        Google AI Overview
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>What is the best Italian restaurant in Davidson, NC?</li>
+
+        <li>Date night restaurants Davidson, NC</li>
+
+        <li>Best Italian restaurant Davidson, NC</li>
+
+      </ul>
+
+    </div>
+
+    <div>
+
+      <h4 className="text-lg font-semibold mb-4">
+        ChatGPT
+      </h4>
+
+      <ul className="space-y-3 list-disc pl-5 text-muted leading-7">
+
+        <li>Best Italian restaurant Davidson, NC</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <h4 className="mt-8 mb-3 font-semibold">
+    SEO Focus
+  </h4>
+
+  <div className="flex flex-wrap gap-2">
+
+    <Badge>Restaurant SEO</Badge>
+
+    <Badge>Local SEO</Badge>
+
+    <Badge>Recommendation-Based Searches</Badge>
+
+    <Badge>Local Dining Discovery</Badge>
+
+    <Badge>AI Search Visibility</Badge>
+
+  </div>
+
+</div>
+{/* ===========================
+    SEO Skills Demonstrated
+=========================== */}
+
+<div className="mt-16 border-t border-border pt-12">
+
+  <h2 className="text-3xl font-bold text-foreground">
+    SEO Skills Demonstrated
+  </h2>
+
+  <p className="mt-4 max-w-3xl text-muted leading-7">
+    These AI search visibility case studies demonstrate my ability to research
+    user search intent, develop SEO-driven content strategies, optimize for
+    Google's AI Overviews, and improve visibility across emerging AI-powered
+    search platforms. My work combines traditional SEO best practices with
+    modern AI search optimization (Generative Engine Optimization - GEO).
+  </p>
+
+  <div className="mt-8 flex flex-wrap gap-3">
+
+    <Badge>AI Search Optimization (GEO)</Badge>
+
+    <Badge>Google AI Overview Optimization</Badge>
+
+    <Badge>ChatGPT Search Visibility</Badge>
+
+    <Badge>Keyword Research</Badge>
+
+    <Badge>Search Intent Analysis</Badge>
+
+    <Badge>Local SEO</Badge>
+
+    <Badge>Long-Tail Keyword Strategy</Badge>
+
+    <Badge>Content Strategy</Badge>
+
+    <Badge>Content Optimization</Badge>
+
+    <Badge>Technical SEO</Badge>
+
+    <Badge>Competitive Research</Badge>
+
+    <Badge>Entity SEO</Badge>
+
+    <Badge>Topical Authority</Badge>
+
+    <Badge>Semantic SEO</Badge>
+
+    <Badge>On-Page SEO</Badge>
+
+    <Badge>AI-Assisted SEO Workflow</Badge>
+
+  </div>
+
+</div>
+
+{/* ===========================
+    Tools & Technologies
+=========================== */}
+
+<div className="mt-16 border-t border-border pt-12">
+
+  <h2 className="text-3xl font-bold text-foreground">
+    Tools & Technologies
+  </h2>
+
+  <p className="mt-4 max-w-3xl text-muted leading-7">
+    Throughout these SEO projects, I leveraged industry-leading SEO platforms,
+    AI tools, analytics software, and modern web development technologies to
+    research, optimize, publish, and monitor high-performing content.
+  </p>
+
+  <div className="mt-8 flex flex-wrap gap-3">
+
+    <Badge variant="outline">Next.js</Badge>
+
+    <Badge variant="outline">Claude AI</Badge>
+
+    <Badge variant="outline">ChatGPT</Badge>
+
+    <Badge variant="outline">Visual Studio Code</Badge>
+
+    <Badge variant="outline">Git Bash</Badge>
+
+    <Badge variant="outline">GitHub</Badge>
+
+    <Badge variant="outline">Vercel</Badge>
+
+    <Badge variant="outline">Google Search Console</Badge>
+
+    <Badge variant="outline">Google Analytics</Badge>
+
+    <Badge variant="outline">Ahrefs</Badge>
+
+    <Badge variant="outline">SEMrush</Badge>
+
+    <Badge variant="outline">Screaming Frog SEO Spider</Badge>
+
+  </div>
+
+</div>
+
+{/* ===========================
+    Portfolio Summary
+=========================== */}
+
+<div className="mt-20 rounded-2xl border border-accent/20 bg-accent/5 p-8">
+
+  <h2 className="text-3xl font-bold text-foreground">
+    Portfolio Highlights
+  </h2>
+
+  <p className="mt-6 text-muted leading-8">
+
+    These projects demonstrate my experience in creating SEO content that
+    performs across both traditional search engines and AI-powered search
+    experiences. By combining keyword research, search intent analysis,
+    content optimization, local SEO, and AI-assisted workflows, I helped
+    clients increase their visibility for competitive informational and
+    commercial search queries.
+
+  </p>
+
+  <p className="mt-6 text-muted leading-8">
+
+    My experience spans multiple industries including dental marketing,
+    healthcare, residential real estate, business brokerage, hospitality,
+    restaurants, and local businesses. I continuously adapt SEO strategies
+    to align with evolving search technologies such as Google AI Overviews,
+    ChatGPT Search, and other generative search platforms.
+
+  </p>
+
+</div>
         <div className="space-y-5">
           {caseStudies.map((cs, i) => {
             const isOpen = openIndex === i;
