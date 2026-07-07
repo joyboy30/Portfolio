@@ -118,33 +118,33 @@ export const aiPortfolio: AIPortfolioItem[] = [
     title: "AI Ad Creative",
     icon: "ImageIcon",
     description:
-      "Using Midjourney to generate scroll-stopping ad visuals for Meta Ads campaigns — cutting creative turnaround time without sacrificing quality.",
+      "Using Gemini, ChatGPT, and Canva to generate scroll-stopping ad visuals for Website blogs, Google ads and Meta Ads campaigns cutting creative turnaround time without sacrificing quality.",
     details: [
-      "Image ad generation for Facebook/Meta campaigns",
+      "Image ad generation for website blogs, Google Ads and Meta Ads campaigns",
       "Rapid concept testing before committing to a full shoot",
       "Prompt-crafted visuals matched to brand and offer",
     ],
   },
   {
-    title: "AI Copywriting",
+    title: "AI Content Writing",
     icon: "PenLine",
     description:
-      "Using ChatGPT to draft and iterate ad copy, keyword lists, and content angles quickly — then editing for brand voice and conversion intent.",
+      "Using Claude AI to draft and iterate blog content, keyword research, and topic angles quickly then editing for brand voice and SEO intent.",
     details: [
-      "Ad copy variations for split testing",
-      "Interest and keyword enumeration for audience targeting",
-      "First-draft content acceleration for blogs and product pages",
+      "Blog outline and draft generation for faster content turnaround",
+      "Keyword and topic research to guide content planning",
+      "First-draft acceleration for blog posts and website copy",
     ],
   },
   {
     title: "AI Search Optimization",
     icon: "Sparkles",
     description:
-      "Structuring content so it performs not just in traditional search results, but inside AI-generated answers and overviews.",
+      "What is AI Search Optimization? It's the practice of structuring website content especially blogs so it gets pulled into AI-generated answers, overviews, and citations, not just traditional search rankings, helping brands stay visible as more searches happen through AI.",
     details: [
-      "AI Search Optimization (AIO) for AI-driven discovery",
-      "Answer Engine Optimization (AEO) for direct-answer visibility",
-      "Generative Engine Optimization (GEO) for citation in generative search",
+      "AI Search Optimization (AIO) - structuring blog content for AI-driven discovery",
+      "Answer Engine Optimization (AEO) - formatting content to directly answer user queries",
+      "Generative Engine Optimization (GEO) - optimizing content to be cited in AI-generated responses",
     ],
   },
 ];
