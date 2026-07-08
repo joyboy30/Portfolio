@@ -85,13 +85,6 @@ const categories: Category[] = [
     href: "/blog/category/content-marketing",
     icon: PenTool,
   },
-  {
-    title: "SEO Case Studies",
-    description:
-      "Real client projects, real constraints, and the measurable outcomes — traffic, rankings, and visibility gains.",
-    href: "/blog/category/seo-case-studies",
-    icon: BarChart3,
-  },
 ];
 
 interface Article {
