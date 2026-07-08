@@ -12,6 +12,7 @@ export const navLinks = [
   { label: "AI Portfolio", href: "#ai-portfolio" },
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export const heroStats = [
