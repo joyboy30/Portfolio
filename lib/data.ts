@@ -16,8 +16,8 @@ export const navLinks = [
 ];
 
 export const heroStats = [
-  { value: 3, suffix: "+", label: "Years in SEO" },
-  { value: 5, suffix: "", label: "Industries served" },
+  { value: 3, suffix: "", label: "Years in SEO" },
+  { value: 8, suffix: "", label: "Industries served" },
   { value: 9, suffix: "+", label: "Platforms & tools" },
   { value: 100, suffix: "%", label: "Remote-ready" },
 ];
