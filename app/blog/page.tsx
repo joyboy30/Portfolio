@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
 import type { ComponentType } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   RefreshCw,
   MapPin,
   Settings2,
   Sparkles,
   PenTool,
-  BarChart3,
   ArrowRight,
   ArrowUpRight,
-  Clock,
-  CalendarDays,
   Search,
   Bot,
   FileSearch,
@@ -84,79 +80,6 @@ const categories: Category[] = [
       "Search-intent-driven content strategy, topical authority, and AI-assisted content workflows that hold up to editing.",
     href: "/blog/category/content-marketing",
     icon: PenTool,
-  },
-];
-
-interface Article {
-  title: string;
-  excerpt: string;
-  category: string;
-  date: string;
-  readTime: string;
-  slug: string;
-  image: string;
-}
-
-const articles: Article[] = [
-  {
-    title: "Google June Core Update Explained",
-    excerpt:
-      "What actually shifted in this update, which content types were hit hardest, and the recovery checklist I use with clients before touching a single page.",
-    category: "Google Algorithm Updates",
-    date: "June 18, 2026",
-    readTime: "7 min read",
-    slug: "google-june-core-update-explained",
-    image: "/blog/google-core-update.jpg",
-  },
-  {
-    title: "Local SEO Checklist for Small Businesses",
-    excerpt:
-      "The exact Google Business Profile, citation, and on-page checklist I run for every local client — from dental clinics to restaurants.",
-    category: "Local SEO",
-    date: "June 5, 2026",
-    readTime: "6 min read",
-    slug: "local-seo-checklist-small-businesses",
-    image: "/blog/local-seo-checklist.jpg",
-  },
-  {
-    title: "Technical SEO Audit Guide",
-    excerpt:
-      "A step-by-step crawl-and-diagnose process covering indexing, site architecture, and Core Web Vitals, with a prioritized fix list at the end.",
-    category: "Technical SEO",
-    date: "May 22, 2026",
-    readTime: "9 min read",
-    slug: "technical-seo-audit-guide",
-    image: "/blog/technical-seo-audit.jpg",
-  },
-  {
-    title: "AI Search Optimization in 2026",
-    excerpt:
-      "How AIO, AEO, and GEO differ from traditional SEO, and the content structure changes that help pages get cited by AI answer engines.",
-    category: "AI Search Optimization",
-    date: "May 10, 2026",
-    readTime: "8 min read",
-    slug: "ai-search-optimization-2026",
-    image: "/blog/ai-search-optimization.jpg",
-  },
-  {
-    title: "Google Search Console Tips",
-    excerpt:
-      "The reports I check first on every new client account, and how I use indexing and performance data to prioritize the first 30 days of work.",
-    category: "Technical SEO",
-    date: "April 27, 2026",
-    readTime: "5 min read",
-    slug: "google-search-console-tips",
-    image: "/blog/search-console-tips.jpg",
-  },
-  {
-    title: "How Internal Linking Improves Rankings",
-    excerpt:
-      "A practical framework for structuring internal links around topical authority, crawl depth, and passing relevance to priority pages.",
-    category: "Content Marketing",
-    date: "April 14, 2026",
-    readTime: "6 min read",
-    slug: "internal-linking-improves-rankings",
-    image: "/blog/internal-linking.jpg",
   },
 ];
 
@@ -312,74 +235,6 @@ export default function BlogPage() {
               </Link>
             );
           })}
-        </div>
-      </section>
-
-      {/* ---------------- Featured Articles ---------------- */}
-      <section aria-labelledby="articles-heading" className="relative mx-auto max-w-6xl px-6 py-16 lg:px-8">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 id="articles-heading" className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            Latest articles
-          </h2>
-          <p className="mt-3 text-sm text-white/50 sm:text-base">
-            Fresh breakdowns, guides, and case studies from active client work.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {articles.map((article) => (
-            <article
-              key={article.slug}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-xl hover:shadow-black/30"
-            >
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-white/5">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/50 px-3 py-1 text-xs font-medium text-emerald-200 backdrop-blur-md">
-                  {article.category}
-                </span>
-              </div>
-
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-lg font-medium leading-snug text-white">
-                  <Link
-                    href={`/blog/${article.slug}`}
-                    className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300"
-                  >
-                    {article.title}
-                  </Link>
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-white/50">{article.excerpt}</p>
-
-                <div className="mt-5 flex items-center gap-4 text-xs text-white/40">
-                  <span className="inline-flex items-center gap-1.5">
-                    <CalendarDays className="h-3.5 w-3.5" aria-hidden="true" />
-                    {article.date}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-                    {article.readTime}
-                  </span>
-                </div>
-
-                <Link
-                  href={`/blog/${article.slug}`}
-                  className="group/link mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-white transition-colors duration-300 hover:text-emerald-300"
-                >
-                  Read Article
-                  <ArrowRight
-                    className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1"
-                    aria-hidden="true"
-                  />
-                </Link>
-              </div>
-            </article>
-          ))}
         </div>
       </section>
 
