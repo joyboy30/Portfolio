@@ -176,6 +176,24 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
+    company: "The Jamil Brothers Realty Group",
+    role: "SEO Specialist (Part-Time)",
+    period: "April 2026 – July 2026",
+    industry: "Real Estate",
+    summary:
+      "Worked as a part-time SEO Specialist for a Northern Virginia real estate company, focused on content marketing, AI Search Optimization (AIO), Answer Engine Optimization (AEO), and technical SEO. Helped improve visibility across Google Search, Google AI Overviews, and AI-powered search platforms through structured content and technical improvements.",
+    responsibilities: [
+      "Created SEO blogs targeting home sellers, downsizing, and home equity topics",
+      "Reoptimized existing blogs for heading hierarchy and semantic keywords",
+      "Optimized content for AI Overviews, ChatGPT, and AEO/GEO visibility",
+      "Resolved keyword cannibalization with consolidation and 301 redirects",
+      "Fixed FAQ Schema validation and structured data implementation",
+      "Built authority via directories, Web 2.0 backlinks, and outreach",
+      "Audited and repaired broken internal links for crawlability",
+      "Supported rankings and topical relevance across search intent queries",
+    ],
+  },
+  {
     company: "MyPortal Marketing Agency",
     role: "SEO Specialist",
     period: "January 2024 — March 2026",
