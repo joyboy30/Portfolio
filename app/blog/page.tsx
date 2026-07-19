@@ -269,50 +269,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* ---------------- Newsletter ---------------- */}
-      <section aria-labelledby="newsletter-heading" className="relative mx-auto max-w-4xl px-6 py-16 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-8 py-14 text-center backdrop-blur-sm sm:px-14">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-sky-500/10"
-          />
-          <div className="relative">
-            <h2 id="newsletter-heading" className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Stay Ahead of Google&rsquo;s Search Updates
-            </h2>
-            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-white/50 sm:text-base">
-              One email whenever there&rsquo;s an algorithm shift, a new AI search tactic,
-              or a technical SEO fix worth your time. No spam, unsubscribe anytime.
-            </p>
-
-            <form
-              action="/api/newsletter"
-              method="POST"
-              className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
-            >
-              <label htmlFor="newsletter-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="newsletter-email"
-                name="email"
-                type="email"
-                required
-                placeholder="you@company.com"
-                autoComplete="email"
-                className="w-full rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-colors duration-300 focus:border-emerald-300/50 focus:bg-white/10"
-              />
-              <button
-                type="submit"
-                className="inline-flex flex-none items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-400 to-sky-400 px-6 py-3 text-sm font-semibold text-[#020304] shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
       {/* ---------------- Large CTA ---------------- */}
       <section aria-labelledby="cta-heading" className="relative mx-auto max-w-6xl px-6 py-16 lg:px-8">
         <div className="rounded-[2.5rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent px-8 py-16 text-center sm:px-14">
