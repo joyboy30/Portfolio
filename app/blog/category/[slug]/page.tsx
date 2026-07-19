@@ -674,25 +674,6 @@ export default async function CategoryPage({
           <NotFoundSection slug={slug} />
         ) : (
           <>
-            {/* Featured Articles */}
-            <section id="articles" className="border-b border-white/5 px-6 py-24">
-              <div className="mx-auto max-w-6xl">
-                <div className="mb-12 max-w-2xl">
-                  <p className="mb-3 text-sm font-medium uppercase tracking-wider text-zinc-500">
-                    Featured Articles
-                  </p>
-                  <h2 className="text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl">
-                    Insights on {category.label}
-                  </h2>
-                </div>
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                  {category.articles.map((article) => (
-                    <ArticleCard key={article.slug} article={article} accent={category.accent} />
-                  ))}
-                </div>
-              </div>
-            </section>
-
             {/* Topics Grid */}
             <section className="border-b border-white/5 px-6 py-24">
               <div className="mx-auto max-w-6xl">
