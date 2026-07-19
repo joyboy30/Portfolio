@@ -733,43 +733,6 @@ export default async function CategoryPage({
           </>
         )}
 
-        {/* Newsletter */}
-        <section className="border-b border-white/5 px-6 py-24">
-          <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-center backdrop-blur-sm sm:p-14">
-            <h2 className="mb-3 text-2xl font-semibold tracking-tight text-zinc-50 sm:text-3xl">
-              Stay Ahead of Google&apos;s Search Updates
-            </h2>
-            <p className="mx-auto mb-8 max-w-md text-balance text-zinc-400">
-              Get practical SEO, Local SEO, Technical SEO, and AI search insights delivered
-              straight to your inbox. No noise, just what actually moves rankings.
-            </p>
-            <form className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
-              <label htmlFor="newsletter-email" className="sr-only">
-                Email address
-              </label>
-              <div className="relative flex-1">
-                <Mail
-                  className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500"
-                  aria-hidden="true"
-                />
-                <input
-                  id="newsletter-email"
-                  type="email"
-                  required
-                  placeholder="you@company.com"
-                  className="w-full rounded-full border border-white/15 bg-white/[0.04] py-3 pl-11 pr-4 text-sm text-zinc-100 placeholder:text-zinc-500 outline-none transition-colors focus:border-white/30"
-                />
-              </div>
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-zinc-100 to-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_-8px_rgba(255,255,255,0.3)]"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </section>
-
         {/* Large CTA */}
         <section className="relative overflow-hidden border-b border-white/5 px-6 py-28">
           <div
