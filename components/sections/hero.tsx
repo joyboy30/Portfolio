@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useInView, animate } from "framer-motion";
-import { ArrowUpRight, Download, Search, TrendingUp, MapPin } from "lucide-react";
+import { ArrowUpRight, Download, Search, TrendingUp, MapPin, BadgeCheck } from "lucide-react";
 import { heroStats, industries } from "@/lib/data";
 import { siteConfig } from "@/lib/site-config";
 
@@ -72,7 +72,7 @@ export function Hero() {
 >
   I&apos;m <strong className="font-semibold text-foreground">Igel G. Cudiera</strong>, a{" "}
   <strong className="font-semibold text-foreground">results-driven SEO Specialist</strong>{" "}
-  based in Cebu, Philippines with <strong>3+ years of hands-on experience</strong> in
+  based in Cebu, Philippines with <strong>3 years of hands-on experience</strong> in
   Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, AI Search Optimization (AIO),
   Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO). I help
   e-commerce, dental, real estate, business brokerage, restaurant, and iGaming brands
@@ -88,6 +88,14 @@ export function Hero() {
           >
             <a href="#contact" className="btn-primary">
               Start a Project <ArrowUpRight className="h-4 w-4" />
+            </a>
+            <a
+              href="https://sovatalents.com/talent/igel-cudiera/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
+              <BadgeCheck className="h-4 w-4" /> PinoySEO Certified
             </a>
             <a href={siteConfig.resumeUrl} download className="btn-secondary">
               <Download className="h-4 w-4" /> Download Resume
