@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Target, Compass, Wrench, TrendingUp, ChevronDown, ShieldCheck } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { Badge } from "@/components/ui/badge";
-import { caseStudies } from "@/lib/data";
+import { caseStudies, clientResults, clientResultsHeading } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function CaseStudies() {
@@ -668,6 +669,99 @@ export function CaseStudies() {
 
   </p>
   </div> {/* Portfolio Highlights */}
+
+{/* ===========================
+    Clients SEO Results
+=========================== */}
+
+<div className="mt-20 border-t border-border pt-12">
+
+  <h2 className="text-3xl font-bold text-foreground">
+    {clientResultsHeading}
+  </h2>
+
+  <p className="mt-4 max-w-3xl text-muted leading-7">
+    Real, screenshot-backed traffic and ranking results from client accounts —
+    showing organic growth before and after SEO optimization, along with the
+    specific work performed during each period.
+  </p>
+
+  <div className="mt-10 space-y-10">
+    {clientResults.map((client) => (
+      <div
+        key={client.slug}
+        className="rounded-2xl border border-border bg-card/40 p-6 backdrop-blur-sm sm:p-8"
+      >
+        <h3 className="text-2xl font-bold text-foreground">{client.name}</h3>
+
+        {client.images && (
+          <div className="mt-8 space-y-10">
+            {client.images.map((img, idx) => (
+              <div key={idx}>
+                {img.metric && (
+                  <p className="mb-3 font-medium text-accent">{img.metric}</p>
+                )}
+                <div className="relative w-full overflow-hidden rounded-xl border border-border-strong">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={1600}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 900px"
+                    className="h-auto w-full object-contain"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {client.periods && (
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            {client.periods.map((period, idx) => (
+              <div
+                key={idx}
+                className="rounded-xl border border-border-strong bg-surface/40 p-6"
+              >
+                <h4 className="text-lg font-semibold text-foreground">
+                  {period.label}
+                </h4>
+
+                {period.metric && (
+                  <p className="mt-1 font-medium text-accent">{period.metric}</p>
+                )}
+
+                <div className="relative mt-4 w-full overflow-hidden rounded-lg border border-border">
+                  <Image
+                    src={period.image}
+                    alt={period.alt}
+                    width={1200}
+                    height={800}
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    className="h-auto w-full object-contain"
+                  />
+                </div>
+
+                {period.bullets && (
+                  <ul className="mt-4 space-y-2">
+                    {period.bullets.map((bullet) => (
+                      <li key={bullet} className="flex gap-2 text-sm text-muted">
+                        <span aria-hidden className="leading-none">✅</span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+
+</div> {/* Clients SEO Results */}
+
 </div> {/* End AI Search Visibility Case Studies */}
         <div className="space-y-5">
           {caseStudies.map((cs, i) => {
