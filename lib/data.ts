@@ -461,3 +461,275 @@ export const services: Service[] = [
     outcomes: ["Consistent monthly SEO execution", "Transparent reporting", "One accountable point of contact"],
   },
 ];
+
+// -----------------------------------------------------------------------
+// Clients SEO Results
+//
+// Real, screenshot-backed traffic/ranking results by client. Distinct from
+// `caseStudies` above (which are narrative case studies) — this section is
+// a lightweight, image-driven proof gallery: a client name, an optional
+// metric line, a screenshot, and optional supporting bullet points.
+//
+// Two shapes are supported per client, matching how the source results
+// were provided:
+//   - `images`: a flat, ordered sequence of screenshots (each with an
+//     optional metric caption). Use this for clients with one or more
+//     standalone screenshots that aren't organized into before/after
+//     periods (e.g. Ann Arbor Smiles, Wincrest Orthodontics).
+//   - `periods`: a before/after comparison, each period carrying its own
+//     screenshot and optional bullet list of optimizations performed
+//     (e.g. Androscoggin Dental Group, Batavia Family Dental).
+//
+// A client should populate one or the other (not both).
+// -----------------------------------------------------------------------
+
+export type ClientResultImage = {
+  src: string;
+  alt: string;
+  metric?: string;
+};
+
+export type ClientResultPeriod = {
+  label: string;
+  metric?: string;
+  image: string;
+  alt: string;
+  bullets?: string[];
+};
+
+export type ClientResult = {
+  slug: string;
+  name: string;
+  images?: ClientResultImage[];
+  periods?: ClientResultPeriod[];
+};
+
+export const clientResultsHeading = "Clients SEO Results";
+
+export const clientResults: ClientResult[] = [
+  {
+    slug: "wincrest-orthodontics",
+    name: "Wincrest Orthodontics",
+    images: [
+      {
+        src: "/images/case-studies/wincrest1.png",
+        alt: "Wincrest Orthodontics organic traffic report, June 2022",
+        metric: "Average Traffic (June 2022) - 224",
+      },
+      {
+        src: "/images/case-studies/wincrest2.png",
+        alt: "Wincrest Orthodontics organic traffic report, May 2024",
+        metric: "Average Traffic (May 2024) - 1,705",
+      },
+      {
+        src: "/images/case-studies/wincrest3.png",
+        alt: "Wincrest Orthodontics Ahrefs backlink and keyword data",
+        metric: "Wincrest Orthodontics Ahrefs Data",
+      },
+    ],
+  },
+  {
+    slug: "ann-arbor-smiles",
+    name: "Ann Arbor Smiles",
+    images: [
+      {
+        src: "/images/case-studies/annarborsmiles.png",
+        alt: "Ann Arbor Smiles SEO results screenshot",
+      },
+    ],
+  },
+  {
+    slug: "smile-quest-dental",
+    name: "Smile Quest Dental",
+    images: [
+      {
+        src: "/images/case-studies/smilequestdental.png",
+        alt: "Smile Quest Dental SEO results screenshot",
+      },
+    ],
+  },
+  {
+    slug: "toothology",
+    name: "Toothology",
+    images: [
+      {
+        src: "/images/case-studies/toothology.png",
+        alt: "Toothology SEO results screenshot",
+      },
+    ],
+  },
+  {
+    slug: "the-dental-health-practice",
+    name: "The Dental Health Practice",
+    images: [
+      {
+        src: "/images/case-studies/thedentalhealthpractice.png",
+        alt: "The Dental Health Practice SEO results screenshot",
+      },
+    ],
+  },
+  {
+    slug: "skyview-dental",
+    name: "Skyview Dental",
+    images: [
+      {
+        src: "/images/case-studies/skyviewdental.png",
+        alt: "Skyview Dental SEO results screenshot",
+      },
+    ],
+  },
+  {
+    slug: "androscoggin-dental-group",
+    name: "Androscoggin Dental Group",
+    periods: [
+      {
+        label: "Before Transition Period",
+        metric: "Organic Traffic - 202",
+        image: "/images/case-studies/androscoggindentalgroup1.png",
+        alt: "Androscoggin Dental Group organic traffic before transition period",
+        bullets: [
+          "Optimized 15 primary keywords",
+          "Optimized 7 secondary keywords",
+          "Built 3 guest post backlinks per month",
+        ],
+      },
+      {
+        label: "After Transition Period",
+        metric: "Organic Traffic - 282",
+        image: "/images/case-studies/androscoggindentalgroup2.png",
+        alt: "Androscoggin Dental Group organic traffic after transition period",
+        bullets: [
+          "Optimized 3 primary keywords",
+          "Optimized 5 secondary keywords",
+          "Built 2 guest post backlinks per month",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "batavia-family-dental",
+    name: "Batavia Family Dental",
+    periods: [
+      {
+        label: "Before Transition Period (March–June)",
+        image: "/images/case-studies/batavia1.png",
+        alt: "Batavia Family Dental SEO results before transition period",
+        bullets: [
+          "Optimized 15 primary keywords",
+          "Optimized 7 secondary keywords",
+          "Built 3 guest post backlinks per month",
+        ],
+      },
+      {
+        label: "After Transition Period (July–November)",
+        image: "/images/case-studies/batavia2.png",
+        alt: "Batavia Family Dental SEO results after transition period",
+        bullets: [
+          "Optimized 3 primary keywords",
+          "Optimized 5 secondary keywords",
+          "Built 2 guest post backlinks per month",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "comfort-dental-spa",
+    name: "Comfort Dental Spa",
+    periods: [
+      {
+        label: "Before Transition Period (March–June)",
+        image: "/images/case-studies/comfortdental1.png",
+        alt: "Comfort Dental Spa SEO results before transition period",
+        bullets: [
+          "Optimized 15 primary keywords",
+          "Optimized 7 secondary keywords",
+          "Built 3 guest post backlinks per month",
+        ],
+      },
+      {
+        label: "After Transition Period (July–November)",
+        image: "/images/case-studies/comfortdental2.png",
+        alt: "Comfort Dental Spa SEO results after transition period",
+        bullets: [
+          "Optimized 5 primary keywords",
+          "Optimized 10 secondary keywords",
+          "Built 2 guest post backlinks per month",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "crosstown-dental",
+    name: "Crosstown Dental",
+    periods: [
+      {
+        label: "Before Transition Period (March–June)",
+        image: "/images/case-studies/crosstowndental1.png",
+        alt: "Crosstown Dental SEO results before transition period",
+        bullets: ["No SEO optimizations were performed before July 2024."],
+      },
+      {
+        label: "After Transition Period (July–November)",
+        image: "/images/case-studies/crosstowndental2.png",
+        alt: "Crosstown Dental SEO results after transition period",
+        bullets: [
+          "Optimized 3 primary keywords",
+          "Optimized 5 secondary keywords",
+          "Built 2 guest post backlinks per month",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "dental-horizons",
+    name: "Dental Horizons",
+    periods: [
+      {
+        label: "Before Transition Period (March–June)",
+        image: "/images/case-studies/dentalhorizons1.png",
+        alt: "Dental Horizons SEO results before transition period",
+        bullets: [
+          "Optimized 20 primary keywords",
+          "Optimized 10 secondary keywords",
+          "Built 2 guest post backlinks per month",
+        ],
+      },
+      {
+        label: "After Transition Period (July–November)",
+        image: "/images/case-studies/dentalhorizons2.png",
+        alt: "Dental Horizons SEO results after transition period",
+        bullets: [
+          "Optimized 3 primary keywords",
+          "Optimized 5 secondary keywords",
+          "Built 2 guest post backlinks per month",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "orillia-dentistry",
+    name: "Orillia Dentistry",
+    periods: [
+      {
+        label: "Before Transition Period (March–June)",
+        image: "/images/case-studies/orillia1.png",
+        alt: "Orillia Dentistry SEO results before transition period",
+        bullets: [
+          "Optimized 15 primary keywords",
+          "Optimized 7 secondary keywords",
+          "Built 3 guest post backlinks per month",
+        ],
+      },
+      {
+        label: "After Transition Period (July–November)",
+        image: "/images/case-studies/orillia2.png",
+        alt: "Orillia Dentistry SEO results after transition period",
+        bullets: [
+          "Optimized 3 primary keywords",
+          "Optimized 5 secondary keywords",
+          "Built 2 guest post backlinks per month",
+        ],
+      },
+    ],
+  },
+];
