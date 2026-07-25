@@ -63,7 +63,7 @@ export function Header() {
           <div className="hidden items-center gap-3 lg:flex">
             <Button variant="primary" size="sm" asChild>
               <a href="#contact">
-                Hire Me <ArrowUpRight className="h-3.5 w-3.5" />
+                Let's Work Together <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
             </Button>
           </div>
