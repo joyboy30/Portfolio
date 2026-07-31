@@ -48,7 +48,7 @@ export function Hero() {
             className="eyebrow"
           >
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-accent" />
-            Available for freelance &amp; full-time SEO roles
+            Available for freelance, contract, part-time &amp; full-time SEO roles
           </motion.div>
 
           <motion.h1
@@ -57,11 +57,11 @@ export function Hero() {
   transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
   className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
 >
-  Driving{" "}
+  SEO Specialist{" "}
   <span className="bg-accent-gradient bg-clip-text text-transparent">
-    Higher Rankings
+    in the Philippines
   </span>
-  , Organic Traffic, Leads &amp; Conversions.
+  , Driving Higher Rankings &amp; Organic Growth.
           </motion.h1>
 
           <motion.p
@@ -72,10 +72,10 @@ export function Hero() {
 >
   I&apos;m <strong className="font-semibold text-foreground">Igel G. Cudiera</strong>, a{" "}
   <strong className="font-semibold text-foreground">results-driven SEO Specialist</strong>{" "}
-  based in Cebu, Philippines with <strong>3 years of hands-on experience</strong> in
+  based in Cebu, Philippines with <strong>3+ years of hands-on experience</strong> in
   Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, AI Search Optimization (AIO),
   Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO). I help
-  e-commerce, dental, real estate, business brokerage, restaurant, and iGaming brands
+  e-commerce, dental clinic, real estate, business brokerage, restaurants, pet shop, mortgage lender, solar company, restaurants, and iGaming brands
   improve search visibility, increase organic traffic, and drive measurable business
   growth through data-driven SEO strategies.
 </motion.p>
