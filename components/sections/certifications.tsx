@@ -16,7 +16,7 @@ export function Certifications() {
         <SectionHeading
           eyebrow="Certifications"
           title="Continuously Learning. Continuously Growing as a Digital Marketing Professional"
-          description="Formal training across SEO, technical SEO, Google Ads, and Meta Ads — click any certificate to view it in full."
+          description="Formal training across SEO, technical SEO, Google Ads, and Meta Ads click any certificate to view it in full."
           align="center"
           className="mb-16"
         />
