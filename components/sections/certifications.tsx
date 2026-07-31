@@ -15,7 +15,7 @@ export function Certifications() {
       <div className="container-shell">
         <SectionHeading
           eyebrow="Certifications"
-          title="Continuously trained, continuously certified."
+          title="Continuously Learning. Continuously Growing as a Digital Marketing Professional"
           description="Formal training across SEO, technical SEO, Google Ads, and Meta Ads — click any certificate to view it in full."
           align="center"
           className="mb-16"
