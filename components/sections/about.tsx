@@ -12,8 +12,8 @@ export function About() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <SectionHeading
             eyebrow="About Me"
-            title="An SEO specialist who thinks like an engineer and writes like a marketer."
-            description="I got here through hands-on client work, not just courses — building sites from scratch, fixing what was broken under the hood, and learning what actually moves rankings for real businesses."
+            title="An SEO expert who thinks like an engineer and writes like a marketer."
+            description="I got here through hands-on client work, not just courses building sites from scratch, fixing what was broken under the hood, and learning what actually moves rankings for real businesses."
           />
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -53,7 +53,7 @@ export function About() {
                 </span>
                 <div>
                   <p className="text-sm font-semibold text-foreground">Languages</p>
-                  <p className="text-xs text-muted">English · Tagalog · Visayan</p>
+                  <p className="text-xs text-muted">English · Tagalog · Cebuano</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
