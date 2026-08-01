@@ -75,7 +75,7 @@ export function Hero() {
   based in Cebu, Philippines with <strong>3+ years of hands-on experience</strong> in
   Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, AI Search Optimization (AIO),
   Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO). I help
-  e-commerce, dental clinic, real estate, business brokerage, restaurants, pet shop, mortgage lender, solar company, restaurants, and iGaming brands
+  e-commerce, dental clinic, real estate, business brokerage, restaurants, veterinary clinic, mortgage lender, solar company, restaurants, and iGaming brands
   improve search visibility, increase organic traffic, and drive measurable business
   growth through data-driven SEO strategies.
 </motion.p>
