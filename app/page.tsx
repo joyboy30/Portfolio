@@ -11,7 +11,6 @@ import { Certifications } from "@/components/sections/certifications";
 import { AIPortfolio } from "@/components/sections/ai-portfolio";
 import { Timeline } from "@/components/sections/timeline";
 import { SeoProcess } from "@/components/sections/seo-process";
-import { Testimonials } from "@/components/sections/testimonials";
 import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
