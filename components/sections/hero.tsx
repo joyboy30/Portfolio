@@ -48,32 +48,33 @@ export function Hero() {
             className="eyebrow"
           >
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-accent" />
-            Available for freelance, contract, part-time &amp; full-time SEO roles
+            Available for freelance &amp; full-time SEO roles
           </motion.div>
 
           <motion.h1
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-  className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
->
-  The SEO Specialist{" "}
-  <span className="bg-accent-gradient bg-clip-text text-transparent">
-    in the Philippines
-  </span>
-  , Whose Client Content Gets Cited Inside Google AI Overviews and ChatGPT.
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+          >
+            The SEO Specialist in{" "}
+            <span className="whitespace-nowrap">the Philippines</span>, whose client content gets
+            cited inside{" "}
+            <span className="bg-accent-gradient bg-clip-text text-transparent">
+              Google AI Overviews and ChatGPT.
+            </span>
           </motion.h1>
 
           <motion.p
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-  className="mt-6 max-w-xl text-lg leading-relaxed text-muted"
->
-  I&apos;m <strong className="font-semibold text-foreground">Igel G. Cudiera</strong>, a{" "}
-  <strong className="font-semibold text-foreground">a technical-minded SEO Specialist</strong>{" "}
-  based in Cebu, Philippines, helping local service businesses and e-commerce brands grow organic traffic and stay visible as search moves into AI-generated answers. 3+ years of technical SEO, on-page optimization, and AI Search Optimization (AIO/AEO/GEO) for real estate, dental, e-commerce, and local service brands. I don't just help you rank I help you show up where searches are actually happening now, including inside AI-generated answers.
-</motion.p>
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-6 max-w-xl text-lg leading-relaxed text-muted"
+          >
+            I&apos;m <strong className="font-semibold text-foreground">Igel G. Cudiera</strong>, a{" "}
+            <strong className="font-semibold text-foreground">technical-minded SEO Specialist</strong>{" "}
+            based in Cebu, Philippines, helping local service businesses and e-commerce brands grow organic traffic and stay visible as search moves into AI-generated answers. 3+ years of technical SEO, on-page optimization, and AI Search Optimization (AIO/AEO/GEO) for real estate, dental, e-commerce, and local service brands. I don&apos;t just help you rank — I help you show up where searches are actually happening now, including inside AI-generated answers.
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
