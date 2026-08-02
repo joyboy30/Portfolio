@@ -29,7 +29,6 @@ export default function Home() {
         <AIPortfolio />
         <Timeline />
         <SeoProcess />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />
