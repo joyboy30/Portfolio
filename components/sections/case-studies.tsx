@@ -6,8 +6,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Target, Compass, Wrench, TrendingUp, ChevronDown, ShieldCheck } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { Badge } from "@/components/ui/badge";
-import { caseStudies, clientResults, clientResultsHeading } from "@/lib/data";
+import {
+  caseStudies,
+  clientResults,
+  clientResultsHeading,
+  dentalTrafficResults,
+  dentalTrafficResultsHeading,
+} from "@/lib/data";
 import { cn } from "@/lib/utils";
+
+function growthPercent(before: number, after: number) {
+  if (before === 0) return null;
+  const pct = ((after - before) / before) * 100;
+  return `+${pct.toFixed(0)}%`;
+}
 
 export function CaseStudies() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -671,7 +683,7 @@ export function CaseStudies() {
   </div> {/* Portfolio Highlights */}
 
 {/* ===========================
-    Clients SEO Results
+    Clients SEO Results — proof gallery (Wincrest + supporting clients)
 =========================== */}
 
 <div className="mt-20 border-t border-border pt-12">
@@ -681,9 +693,9 @@ export function CaseStudies() {
   </h2>
 
   <p className="mt-4 max-w-3xl text-muted leading-7">
-    Real, screenshot-backed traffic and ranking results from client accounts —
-    showing organic growth before and after SEO optimization, along with the
-    specific work performed during each period.
+    Real, screenshot-backed traffic and ranking results from client accounts,
+    led by Wincrest Orthodontics — a documented climb from 224 to 1,705
+    monthly organic visits.
   </p>
 
   <div className="mt-10 space-y-10">
@@ -694,73 +706,79 @@ export function CaseStudies() {
       >
         <h3 className="text-2xl font-bold text-foreground">{client.name}</h3>
 
-        {client.images && (
-          <div className="mt-8 space-y-10">
-            {client.images.map((img, idx) => (
-              <div key={idx}>
-                {img.metric && (
-                  <p className="mb-3 font-medium text-accent">{img.metric}</p>
-                )}
-                <div className="relative w-full overflow-hidden rounded-xl border border-border-strong">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={1600}
-                    height={900}
-                    sizes="(max-width: 768px) 100vw, 900px"
-                    className="h-auto w-full object-contain"
-                  />
-                </div>
+        <div className="mt-8 space-y-10">
+          {client.images.map((img, idx) => (
+            <div key={idx}>
+              {img.metric && (
+                <p className="mb-3 font-medium text-accent">{img.metric}</p>
+              )}
+              <div className="relative w-full overflow-hidden rounded-xl border border-border-strong">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={1600}
+                  height={900}
+                  sizes="(max-width: 768px) 100vw, 900px"
+                  className="h-auto w-full object-contain"
+                />
               </div>
-            ))}
-          </div>
-        )}
-
-        {client.periods && (
-          <div className="mt-8 grid gap-8 lg:grid-cols-2">
-            {client.periods.map((period, idx) => (
-              <div
-                key={idx}
-                className="rounded-xl border border-border-strong bg-surface/40 p-6"
-              >
-                <h4 className="text-lg font-semibold text-foreground">
-                  {period.label}
-                </h4>
-
-                {period.metric && (
-                  <p className="mt-1 font-medium text-accent">{period.metric}</p>
-                )}
-
-                <div className="relative mt-4 w-full overflow-hidden rounded-lg border border-border">
-                  <Image
-                    src={period.image}
-                    alt={period.alt}
-                    width={1200}
-                    height={800}
-                    sizes="(max-width: 768px) 100vw, 600px"
-                    className="h-auto w-full object-contain"
-                  />
-                </div>
-
-                {period.bullets && (
-                  <ul className="mt-4 space-y-2">
-                    {period.bullets.map((bullet) => (
-                      <li key={bullet} className="flex gap-2 text-sm text-muted">
-                        <span aria-hidden className="leading-none">✅</span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+            </div>
+          ))}
+        </div>
       </div>
     ))}
   </div>
 
 </div> {/* Clients SEO Results */}
+
+{/* ===========================
+    Dental Client Traffic Results — compressed summary table
+=========================== */}
+
+<div className="mt-20 border-t border-border pt-12">
+
+  <h2 className="text-3xl font-bold text-foreground">
+    {dentalTrafficResultsHeading}
+  </h2>
+
+  <p className="mt-4 max-w-3xl text-muted leading-7">
+    Six additional dental accounts, each run through the same keyword
+    optimization and guest-post link building program — organic traffic
+    before and after, summarized in one table instead of six repeated
+    before/after blocks.
+  </p>
+
+  <div className="mt-10 overflow-x-auto rounded-2xl border border-border bg-card/40 backdrop-blur-sm">
+    <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+      <thead>
+        <tr className="border-b border-border-strong">
+          <th className="px-6 py-4 font-semibold text-foreground">Client</th>
+          <th className="px-6 py-4 font-semibold text-foreground">Before</th>
+          <th className="px-6 py-4 font-semibold text-foreground">After</th>
+          <th className="px-6 py-4 font-semibold text-foreground">Growth</th>
+          <th className="px-6 py-4 font-semibold text-foreground">Key Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {dentalTrafficResults.map((row) => (
+          <tr
+            key={row.slug}
+            className="border-b border-border last:border-0 odd:bg-surface/20"
+          >
+            <td className="px-6 py-4 font-medium text-foreground">{row.client}</td>
+            <td className="px-6 py-4 text-muted">{row.before}</td>
+            <td className="px-6 py-4 text-muted">{row.after}</td>
+            <td className="px-6 py-4 font-medium text-success">
+              {growthPercent(row.before, row.after) ?? "—"}
+            </td>
+            <td className="px-6 py-4 text-muted">{row.keyAction}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+</div> {/* Dental Client Traffic Results */}
 
 </div> {/* End AI Search Visibility Case Studies */}
         <div className="space-y-5">

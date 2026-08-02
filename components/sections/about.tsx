@@ -13,7 +13,7 @@ export function About() {
           <SectionHeading
             eyebrow="About Me"
             title="An SEO expert who thinks like an engineer and writes like a marketer."
-            description="I got here through hands-on client work, not just courses building sites from scratch, fixing what was broken under the hood, and learning what actually moves rankings for real businesses."
+            description="My background is in computer programming and hardware servicing, which is why I don't just run SEO checklists, I understand the systems underneath them: crawlability, indexability, site architecture, and how search engines actually discover a page before it can ever rank."
           />
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">

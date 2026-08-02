@@ -181,7 +181,7 @@ export const experience: Experience[] = [
     period: "April 2026 – July 2026",
     industry: "Real Estate",
     summary:
-      "Worked as an SEO specialist for a Northern Virginia real estate company, focused on content strategy, AI Search Optimization (AIO), Answer Engine Optimization (AEO), and technical SEO. Helped improve search visibility and organic traffic across Google Search, Google AI Overviews, and AI-powered search platforms through structured content, entity optimization, and technical improvements grounded in Google's Search Quality Evaluator Guidelines.",
+      "Helped a Northern Virginia real estate team get cited directly inside Google AI Overviews for high-intent seller searches across four counties. Worked as an SEO specialist for a Northern Virginia real estate company, focused on content strategy, AI Search Optimization (AIO), Answer Engine Optimization (AEO), and technical SEO. Helped improve search visibility and organic traffic across Google Search, Google AI Overviews, and AI-powered search platforms through structured content, entity optimization, and technical improvements grounded in Google's Search Quality Evaluator Guidelines.",
     responsibilities: [
       "Created SEO blogs targeting home sellers, downsizing, and home equity topics",
       "Reoptimized existing blogs for heading hierarchy, semantic keywords, and search intent",
@@ -199,7 +199,7 @@ export const experience: Experience[] = [
     period: "January 2024 — March 2026",
     industry: "Dental · Business Brokerage · Real Estate · E-commerce",
     summary:
-      "Full-cycle SEO specialist for a multi-industry marketing agency, owning on-page SEO, technical SEO, off-page SEO, and local SEO services across a portfolio of client accounts spanning dental, ecommerce, and real estate SEO work.",
+      "Owned full-cycle SEO for a multi-industry agency portfolio, including the campaign that took a dental client from 224 to 1,705 monthly organic visits. Full-cycle SEO specialist for a multi-industry marketing agency, owning on-page SEO, technical SEO, off-page SEO, and local SEO services across a portfolio of client accounts spanning dental, ecommerce, and real estate SEO work.",
     responsibilities: [
       "Keyword research, competitor analysis, blog creation, and internal linking for keyword mapping",
       "Fixed broken links and 404 errors; managed robots.txt disallow rules for crawlability",
@@ -419,7 +419,7 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    title: "Technical SEO Services & Technical SEO Consultant",
+    title: "Technical SEO Audits",
     icon: "SearchCheck",
     description:
       "A full technical SEO audit and diagnosis of your site's indexing, crawlability, speed, structure, and Core Web Vitals — with a prioritized action plan, not just a list of problems. Ideal for businesses that need a hands-on technical SEO consultant rather than a generic checklist.",
@@ -470,17 +470,15 @@ export const services: Service[] = [
 // a lightweight, image-driven proof gallery: a client name, an optional
 // metric line, a screenshot, and optional supporting bullet points.
 //
-// Two shapes are supported per client, matching how the source results
-// were provided:
-//   - `images`: a flat, ordered sequence of screenshots (each with an
-//     optional metric caption). Use this for clients with one or more
-//     standalone screenshots that aren't organized into before/after
-//     periods (e.g. Ann Arbor Smiles, Wincrest Orthodontics).
-//   - `periods`: a before/after comparison, each period carrying its own
-//     screenshot and optional bullet list of optimizations performed
-//     (e.g. Androscoggin Dental Group, Batavia Family Dental).
+// `clientResults` now holds only the standalone, single/multi-screenshot
+// clients (Wincrest Orthodontics is the flagship, best-documented result —
+// 224 to 1,705 organic traffic — plus five supporting proof screenshots).
 //
-// A client should populate one or the other (not both).
+// The six clients that previously repeated an identical "Before Transition
+// Period / After Transition Period" block structure (Androscoggin, Batavia,
+// Comfort Dental Spa, Crosstown, Dental Horizons, Orillia) have been
+// compressed into `dentalTrafficResults` below, rendered as a single
+// summary table instead of six near-identical sections.
 // -----------------------------------------------------------------------
 
 export type ClientResultImage = {
@@ -489,19 +487,10 @@ export type ClientResultImage = {
   metric?: string;
 };
 
-export type ClientResultPeriod = {
-  label: string;
-  metric?: string;
-  image: string;
-  alt: string;
-  bullets?: string[];
-};
-
 export type ClientResult = {
   slug: string;
   name: string;
-  images?: ClientResultImage[];
-  periods?: ClientResultPeriod[];
+  images: ClientResultImage[];
 };
 
 export const clientResultsHeading = "Clients SEO Results";
@@ -578,158 +567,67 @@ export const clientResults: ClientResult[] = [
       },
     ],
   },
+];
+
+// -----------------------------------------------------------------------
+// Compressed dental traffic table
+//
+// Replaces six repetitive before/after blocks with one scannable table.
+// Traffic numbers and key actions are pulled directly from the original
+// period bullets (keyword optimization counts + guest post cadence).
+// -----------------------------------------------------------------------
+
+export type DentalTrafficResult = {
+  slug: string;
+  client: string;
+  before: number;
+  after: number;
+  keyAction: string;
+};
+
+export const dentalTrafficResultsHeading = "Dental Client Traffic Results";
+
+export const dentalTrafficResults: DentalTrafficResult[] = [
   {
     slug: "androscoggin-dental-group",
-    name: "Androscoggin Dental Group",
-    periods: [
-      {
-        label: "Before Transition Period",
-        metric: "Organic Traffic - 202",
-        image: "/images/case-studies/androscoggindentalgroup1.png",
-        alt: "Androscoggin Dental Group organic traffic before transition period",
-        bullets: [
-          "Optimized 15 primary keywords",
-          "Optimized 7 secondary keywords",
-          "Built 3 guest post backlinks per month",
-        ],
-      },
-      {
-        label: "After Transition Period",
-        metric: "Organic Traffic - 282",
-        image: "/images/case-studies/androscoggindentalgroup2.png",
-        alt: "Androscoggin Dental Group organic traffic after transition period",
-        bullets: [
-          "Optimized 3 primary keywords",
-          "Optimized 5 secondary keywords",
-          "Built 2 guest post backlinks per month",
-        ],
-      },
-    ],
+    client: "Androscoggin Dental Group",
+    before: 202,
+    after: 282,
+    keyAction: "Keyword optimization + guest post link building",
   },
   {
     slug: "batavia-family-dental",
-    name: "Batavia Family Dental",
-    periods: [
-      {
-        label: "Before Transition Period (March–June)",
-        image: "/images/case-studies/batavia1.png",
-        alt: "Batavia Family Dental SEO results before transition period",
-        bullets: [
-          "Optimized 15 primary keywords",
-          "Optimized 7 secondary keywords",
-          "Built 3 guest post backlinks per month",
-        ],
-      },
-      {
-        label: "After Transition Period (July–November)",
-        image: "/images/case-studies/batavia2.png",
-        alt: "Batavia Family Dental SEO results after transition period",
-        bullets: [
-          "Optimized 3 primary keywords",
-          "Optimized 5 secondary keywords",
-          "Built 2 guest post backlinks per month",
-        ],
-      },
-    ],
+    client: "Batavia Family Dental",
+    before: 581,
+    after: 812,
+    keyAction: "Keyword optimization + guest post link building",
   },
   {
     slug: "comfort-dental-spa",
-    name: "Comfort Dental Spa",
-    periods: [
-      {
-        label: "Before Transition Period (March–June)",
-        image: "/images/case-studies/comfortdental1.png",
-        alt: "Comfort Dental Spa SEO results before transition period",
-        bullets: [
-          "Optimized 15 primary keywords",
-          "Optimized 7 secondary keywords",
-          "Built 3 guest post backlinks per month",
-        ],
-      },
-      {
-        label: "After Transition Period (July–November)",
-        image: "/images/case-studies/comfortdental2.png",
-        alt: "Comfort Dental Spa SEO results after transition period",
-        bullets: [
-          "Optimized 5 primary keywords",
-          "Optimized 10 secondary keywords",
-          "Built 2 guest post backlinks per month",
-        ],
-      },
-    ],
+    client: "Comfort Dental Spa",
+    before: 176,
+    after: 324,
+    keyAction: "Keyword optimization + guest post link building",
   },
   {
     slug: "crosstown-dental",
-    name: "Crosstown Dental",
-    periods: [
-      {
-        label: "Before Transition Period (March–June)",
-        image: "/images/case-studies/crosstowndental1.png",
-        alt: "Crosstown Dental SEO results before transition period",
-        bullets: ["No SEO optimizations were performed before July 2024."],
-      },
-      {
-        label: "After Transition Period (July–November)",
-        image: "/images/case-studies/crosstowndental2.png",
-        alt: "Crosstown Dental SEO results after transition period",
-        bullets: [
-          "Optimized 3 primary keywords",
-          "Optimized 5 secondary keywords",
-          "Built 2 guest post backlinks per month",
-        ],
-      },
-    ],
+    client: "Crosstown Dental",
+    before: 32,
+    after: 124,
+    keyAction: "First SEO program implemented (keyword optimization + guest post link building)",
   },
   {
     slug: "dental-horizons",
-    name: "Dental Horizons",
-    periods: [
-      {
-        label: "Before Transition Period (March–June)",
-        image: "/images/case-studies/dentalhorizons1.png",
-        alt: "Dental Horizons SEO results before transition period",
-        bullets: [
-          "Optimized 20 primary keywords",
-          "Optimized 10 secondary keywords",
-          "Built 2 guest post backlinks per month",
-        ],
-      },
-      {
-        label: "After Transition Period (July–November)",
-        image: "/images/case-studies/dentalhorizons2.png",
-        alt: "Dental Horizons SEO results after transition period",
-        bullets: [
-          "Optimized 3 primary keywords",
-          "Optimized 5 secondary keywords",
-          "Built 2 guest post backlinks per month",
-        ],
-      },
-    ],
+    client: "Dental Horizons",
+    before: 90,
+    after: 124,
+    keyAction: "Keyword optimization + guest post link building",
   },
   {
     slug: "orillia-dentistry",
-    name: "Orillia Dentistry",
-    periods: [
-      {
-        label: "Before Transition Period (March–June)",
-        image: "/images/case-studies/orillia1.png",
-        alt: "Orillia Dentistry SEO results before transition period",
-        bullets: [
-          "Optimized 15 primary keywords",
-          "Optimized 7 secondary keywords",
-          "Built 3 guest post backlinks per month",
-        ],
-      },
-      {
-        label: "After Transition Period (July–November)",
-        image: "/images/case-studies/orillia2.png",
-        alt: "Orillia Dentistry SEO results after transition period",
-        bullets: [
-          "Optimized 3 primary keywords",
-          "Optimized 5 secondary keywords",
-          "Built 2 guest post backlinks per month",
-        ],
-      },
-    ],
+    client: "Orillia Dentistry",
+    before: 129,
+    after: 188,
+    keyAction: "Keyword optimization + guest post link building",
   },
 ];

@@ -57,11 +57,11 @@ export function Hero() {
   transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
   className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
 >
-  SEO Specialist{" "}
+  The SEO Specialist{" "}
   <span className="bg-accent-gradient bg-clip-text text-transparent">
     in the Philippines
   </span>
-  , Driving Higher Rankings &amp; Organic Growth.
+  , Whose Client Content Gets Cited Inside Google AI Overviews and ChatGPT.
           </motion.h1>
 
           <motion.p
@@ -71,13 +71,8 @@ export function Hero() {
   className="mt-6 max-w-xl text-lg leading-relaxed text-muted"
 >
   I&apos;m <strong className="font-semibold text-foreground">Igel G. Cudiera</strong>, a{" "}
-  <strong className="font-semibold text-foreground">results-driven SEO Specialist</strong>{" "}
-  based in Cebu, Philippines with <strong>3+ years of hands-on experience</strong> in
-  Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, AI Search Optimization (AIO),
-  Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO). I help
-  e-commerce, dental clinic, real estate, business brokerage, restaurants, veterinary clinic, mortgage lender, solar company, restaurants, and iGaming brands
-  improve search visibility, increase organic traffic, and drive measurable business
-  growth through data-driven SEO strategies.
+  <strong className="font-semibold text-foreground">a technical-minded SEO Specialist</strong>{" "}
+  based in Cebu, Philippines, helping local service businesses and e-commerce brands grow organic traffic and stay visible as search moves into AI-generated answers. 3+ years of technical SEO, on-page optimization, and AI Search Optimization (AIO/AEO/GEO) for real estate, dental, e-commerce, and local service brands. I don't just help you rank I help you show up where searches are actually happening now, including inside AI-generated answers.
 </motion.p>
 
           <motion.div
