@@ -42,6 +42,10 @@ export const industries = [
   "Dental Clinics",
   "Real Estate",
   "Business Brokerage",
+  "Mortgage Lender",
+  "Restaurants",
+  "Veterinary Clinic",
+  "Solar Company",
   "iGaming",
 ];
 
