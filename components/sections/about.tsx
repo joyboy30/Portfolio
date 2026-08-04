@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { GraduationCap, Languages, MapPin } from "lucide-react";
@@ -69,34 +67,35 @@ export function About() {
                 </div>
               </div>
             </motion.div>
+
             <motion.div
-  initial={{ opacity: 0, y: 24 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, margin: "-60px" }}
-  transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-  className="mt-8 rounded-2xl border border-white/10 bg-gradient-to-r from-accent/10 to-transparent p-6"
->
-  <h3 className="text-xl font-semibold text-foreground">
-    Learn More About My SEO Approach
-  </h3>
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="glass-card sm:col-span-2 rounded-2xl border border-white/10 bg-gradient-to-r from-accent/10 to-transparent p-6"
+            >
+              <h3 className="text-xl font-semibold text-foreground">
+                Learn More About My SEO Approach
+              </h3>
 
-  <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-    I regularly publish practical articles about <strong>Technical SEO</strong>,{" "}
-    <strong>Local SEO</strong>, <strong>Content Optimization</strong>,{" "}
-    <strong>AI Search Optimization (AIO, AEO, GEO)</strong>, Google AI
-    Overviews, ChatGPT Search, and modern SEO best practices. My blog shares
-    real-world strategies, technical audits, case studies, and actionable
-    insights to help businesses improve their visibility in both traditional
-    search engines and AI-powered search experiences.
-  </p>
+              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+                I regularly publish practical articles about <strong>Technical SEO</strong>,{" "}
+                <strong>Local SEO</strong>, <strong>Content Optimization</strong>,{" "}
+                <strong>AI Search Optimization (AIO, AEO, GEO)</strong>, Google AI
+                Overviews, ChatGPT Search, and modern SEO best practices. My blog shares
+                real-world strategies, technical audits, case studies, and actionable
+                insights to help businesses improve their visibility in both traditional
+                search engines and AI-powered search experiences.
+              </p>
 
-  <Link
-    href="/blog"
-    className="mt-6 inline-flex items-center rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-accent/90"
-  >
-    Read My Blog →
-  </Link>
-</motion.div>
+              <Link
+                href="/blog"
+                className="mt-6 inline-flex items-center rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-accent/90"
+              >
+                Read My Blog →
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>
