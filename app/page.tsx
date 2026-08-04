@@ -11,6 +11,7 @@ import { Certifications } from "@/components/sections/certifications";
 import { AIPortfolio } from "@/components/sections/ai-portfolio";
 import { Timeline } from "@/components/sections/timeline";
 import { SeoProcess } from "@/components/sections/seo-process";
+import FAQ from "@/components/sections/faq";
 import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
         <AIPortfolio />
         <Timeline />
         <SeoProcess />
+        <FAQ />
         <Contact />
       </main>
       <Footer />

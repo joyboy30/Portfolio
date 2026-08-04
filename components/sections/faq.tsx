@@ -236,7 +236,7 @@ function FaqAccordionItem({
   );
 }
 
-export default function Faq() {
+export default function FAQ() {
   const [openId, setOpenId] = useState<string | null>(faqs[0]?.id ?? null);
 
   return (
