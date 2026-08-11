@@ -41,7 +41,7 @@ export function Header() {
               : "border-transparent bg-transparent"
           )}
         >
-          <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold text-foreground">
+          <a href="/" className="flex items-center gap-2 font-display text-lg font-bold text-foreground">
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent-gradient font-mono text-sm font-bold text-white shadow-glow-sm">
               IC
             </span>
@@ -62,7 +62,7 @@ export function Header() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <Button variant="primary" size="sm" asChild>
-              <a href="#contact">
+              <a href="/#contact">
                 Let's Work Together <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
             </Button>
@@ -100,7 +100,7 @@ export function Header() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="btn-primary mt-2 justify-center"
               >

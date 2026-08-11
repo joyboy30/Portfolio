@@ -3,6 +3,7 @@ import { Manrope, Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
 import { personSchema, websiteSchema, organizationSchema } from "@/lib/schema";
+import { Header } from "@/components/header";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -106,6 +107,8 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
+
+        <Header />
 
         {children}
 

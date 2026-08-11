@@ -3,15 +3,15 @@
 // without touching layout/animation code.
 
 export const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Case Studies", href: "#case-studies" },
-  { label: "Skills", href: "#skills" },
-  { label: "Services", href: "#services" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "AI Portfolio", href: "#ai-portfolio" },
-  { label: "Process", href: "#process" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Case Studies", href: "/#case-studies" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Services", href: "/#services" },
+  { label: "Certifications", href: "/#certifications" },
+  { label: "AI Portfolio", href: "/#ai-portfolio" },
+  { label: "Process", href: "/#process" },
+  { label: "Contact", href: "/#contact" },
   { label: "Blog", href: "/blog" },
 ];
 
