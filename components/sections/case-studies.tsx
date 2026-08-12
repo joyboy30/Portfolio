@@ -21,18 +21,20 @@ function growthPercent(before: number, after: number) {
   return `+${pct.toFixed(0)}%`;
 }
 
-export function CaseStudies() {
+export function CaseStudies({ showHeading = true }: { showHeading?: boolean } = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section id="case-studies" className="section-pad relative bg-surface/40">
       <div className="container-shell">
-        <SectionHeading
-          eyebrow="Case Studies"
-          title="Real SEO problems, solved with a clear strategy."
-          description="These case studies showcase real SEO projects, highlighting the strategies, implementation, and measurable results achieved through keyword research, on-page SEO, technical SEO, off-page SEO, content strategy, local SEO, and AI search optimization."
-          className="mb-16"
-        />
+        {showHeading && (
+          <SectionHeading
+            eyebrow="Case Studies"
+            title="Real SEO problems, solved with a clear strategy."
+            description="These case studies showcase real SEO projects, highlighting the strategies, implementation, and measurable results achieved through keyword research, on-page SEO, technical SEO, off-page SEO, content strategy, local SEO, and AI search optimization."
+            className="mb-16"
+          />
+        )}
         {/* AI Search Visibility Case Studies */}
 
         <div className="mb-16 rounded-2xl border border-border bg-card/40 p-8 backdrop-blur-sm">

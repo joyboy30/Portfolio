@@ -9,9 +9,13 @@ export const siteConfig = {
   // sitemap, robots.txt, canonical URLs, Open Graph, and JSON-LD.
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://igel-cudiera-portfolio.vercel.app",
   location: "Medellin, Cebu, Philippines",
+
+  // Contact methods. Email and WhatsApp only — no phone number is published
+  // anywhere on the site (contact section, footer, or JSON-LD).
   email: "igel.cudiera31@gmail.com",
-  phone: "+639196098689",
-  phoneDisplay: "+63 919 609 8689",
+  whatsapp: "https://wa.me/qr/MHR7GGFUNYJ3B1",
+  whatsappLabel: "Let's Chat on WhatsApp",
+
   social: {
     github: "https://github.com/joyboy30",
     onlineJobs: "https://www.onlinejobs.ph/jobseekers/info/2687450",

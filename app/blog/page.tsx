@@ -183,7 +183,7 @@
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent-gradient px-7 py-3.5 text-sm font-semibold text-background shadow-glow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-md"
               >
                 Get Free Website Audit
@@ -201,7 +201,7 @@
               </Link>
 
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-muted transition-colors duration-300 hover:text-accent-light"
               >
                 Contact Us
@@ -335,7 +335,7 @@
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-accent-gradient px-7 py-3.5 text-sm font-semibold text-background shadow-glow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-md"
               >
                 Get Free Website Audit
@@ -343,7 +343,7 @@
               </Link>
 
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-accent bg-accent/10 px-7 py-3.5 text-sm font-semibold text-accent-light transition-all duration-300 hover:bg-accent/20"
               >
                 Hire Me
@@ -387,14 +387,14 @@
               </Link>
 
               <Link
-                href="/#about"
+                href="/about"
                 className="transition-colors duration-300 hover:text-accent-light"
               >
                 About
               </Link>
 
               <Link
-                href="/#case-studies"
+                href="/case-studies"
                 className="transition-colors duration-300 hover:text-accent-light"
               >
                 Portfolio
@@ -408,7 +408,7 @@
               </Link>
 
               <Link
-                href="/#contact"
+                href="/contact"
                 className="transition-colors duration-300 hover:text-accent-light"
               >
                 Contact Us

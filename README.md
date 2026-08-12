@@ -57,7 +57,7 @@ igel-cudiera-portfolio/
 │       ├── testimonials.tsx
 │       └── contact.tsx
 ├── lib/
-│   ├── site-config.ts   # Single source of truth: URL, email, phone, socials
+│   ├── site-config.ts   # Single source of truth: URL, email, WhatsApp, socials
 │   ├── data.ts          # All copy/content (skills, experience, case studies…)
 │   ├── schema.ts         # JSON-LD: Person, WebSite, Organization, Breadcrumb
 │   └── utils.ts          # `cn()` classname helper
@@ -72,7 +72,7 @@ igel-cudiera-portfolio/
 └── .env.example
 ```
 
-**Why this structure:** content lives in `lib/data.ts` and `lib/site-config.ts`, completely separate from layout/animation code in `components/`. To update your bio, add a certification, or change your phone number, you only ever touch `lib/`, never the JSX.
+**Why this structure:** content lives in `lib/data.ts` and `lib/site-config.ts`, completely separate from layout/animation code in `components/`. To update your bio, add a certification, or change a contact method, you only ever touch `lib/`, never the JSX.
 
 ---
 
@@ -137,7 +137,7 @@ All content is centralized in **`lib/data.ts`**:
 | Services offered | `services` |
 | AI Portfolio cards | `aiPortfolio` |
 
-Contact details, email, phone, and social links live in **`lib/site-config.ts`**.
+Contact details — email, WhatsApp, and social links — live in **`lib/site-config.ts`**. No phone number is published anywhere on the site.
 
 ---
 

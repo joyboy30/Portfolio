@@ -9,7 +9,6 @@ export function personSchema() {
     description: siteConfig.description,
     url: siteConfig.url,
     email: `mailto:${siteConfig.email}`,
-    telephone: siteConfig.phone,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Medellin",
@@ -53,7 +52,15 @@ export function organizationSchema() {
     name: `${siteConfig.name} — SEO Services`,
     url: siteConfig.url,
     email: siteConfig.email,
-    telephone: siteConfig.phone,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: siteConfig.email,
+        url: siteConfig.whatsapp,
+        availableLanguage: ["English", "Tagalog", "Cebuano"],
+      },
+    ],
     areaServed: "Worldwide",
     address: {
       "@type": "PostalAddress",
@@ -73,17 +80,61 @@ export function organizationSchema() {
   };
 }
 
-export function breadcrumbSchema() {
+export type BreadcrumbItem = {
+  label: string;
+  href: string;
+};
+
+/**
+ * BreadcrumbList following Google's current structured data requirements:
+ * every ListItem carries position + name, and `item` is omitted on the final
+ * (current page) entry.
+ */
+export function breadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
+    itemListElement: items.map((item, index) => {
+      const isLast = index === items.length - 1;
+      return {
         "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: siteConfig.url,
-      },
-    ],
+        position: index + 1,
+        name: item.label,
+        ...(isLast ? {} : { item: `${siteConfig.url}${item.href === "/" ? "" : item.href}` }),
+      };
+    }),
   };
+}
+
+/**
+ * Service schema for the individual service pages. `name` and `description`
+ * are passed in per page so nothing is duplicated across routes.
+ */
+export function serviceSchema({
+  name,
+  description,
+  path,
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url: `${siteConfig.url}${path}`,
+    serviceType: name,
+    areaServed: "Worldwide",
+    provider: {
+      "@type": "Person",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+  };
+}
+
+export function jsonLdScript(schema: unknown) {
+  return { __html: JSON.stringify(schema) };
 }

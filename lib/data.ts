@@ -2,7 +2,10 @@
 // scattered inside components) makes it trivial to update wording later
 // without touching layout/animation code.
 
-export const navLinks = [
+// Site navigation now lives in `lib/navigation.ts` (real page routes, with the
+// nested Services tree). The list below is only the on-page jump links for the
+// homepage's own sections.
+export const homeSectionLinks = [
   { label: "About", href: "/#about" },
   { label: "Experience", href: "/#experience" },
   { label: "Case Studies", href: "/#case-studies" },
@@ -11,8 +14,8 @@ export const navLinks = [
   { label: "Certifications", href: "/#certifications" },
   { label: "AI Portfolio", href: "/#ai-portfolio" },
   { label: "Process", href: "/#process" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/#contact" },
-  { label: "Blog", href: "/blog" },
 ];
 
 export const heroStats = [
@@ -419,11 +422,14 @@ export type Service = {
   icon: string;
   description: string;
   outcomes: string[];
+  /** Dedicated service page this homepage card links through to. */
+  href: string;
 };
 
 export const services: Service[] = [
   {
     title: "Technical SEO Audits",
+    href: "/services/seo/technical-seo",
     icon: "SearchCheck",
     description:
       "A full technical SEO audit and diagnosis of your site's indexing, crawlability, speed, structure, and Core Web Vitals — with a prioritized action plan, not just a list of problems. Ideal for businesses that need a hands-on technical SEO consultant rather than a generic checklist.",
@@ -431,6 +437,7 @@ export const services: Service[] = [
   },
   {
     title: "On-Page SEO Services & Content Optimization",
+    href: "/services/seo/on-page-seo",
     icon: "FileSearch",
     description:
       "Keyword research and onpage SEO techniques that align your pages with real search intent — titles, meta descriptions, headings, internal linking, and schema markup, backed by an onpage SEO checklist refined across dozens of client accounts.",
@@ -438,6 +445,7 @@ export const services: Service[] = [
   },
   {
     title: "Local SEO Services & Google Business Profile Management",
+    href: "/services/seo/local-seo",
     icon: "MapPinned",
     description:
       "Full local SEO services — NAP consistency, categories, products/services, GBP posting, and local citation building to win the map pack for local businesses, dental clinics, and real estate teams alike.",
@@ -445,6 +453,7 @@ export const services: Service[] = [
   },
   {
     title: "Google Ads & Meta Ads Management",
+    href: "/services/paid-ads",
     icon: "Megaphone",
     description:
       "End-to-end paid media management — Ads Manager setup, audience and creative testing, budgeting, retargeting, and scaling — built to complement organic SEO strategy with reliable lead generation.",
@@ -452,6 +461,7 @@ export const services: Service[] = [
   },
   {
     title: "AI Search Optimization (AIO / AEO / GEO)",
+    href: "/services/seo/ai-search-optimization",
     icon: "Sparkles",
     description:
       "Positioning your content to be found and cited by AI Overviews, generative AI, and AI answer engines — the AI search optimization layer traditional search engine optimization alone doesn't cover, including entity optimization and AI citation optimization.",
@@ -459,6 +469,7 @@ export const services: Service[] = [
   },
   {
     title: "Full-Site SEO Management & Ongoing SEO Consultancy",
+    href: "/services/seo",
     icon: "LayoutDashboard",
     description:
       "Ongoing, hands-on SEO management and technical SEO consultancy for businesses that want a dedicated freelance SEO specialist rather than a rotating agency team — professional SEO services built around transparent, accountable execution.",

@@ -7,19 +7,21 @@ import { Award, X, Expand } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { certifications, type Certification } from "@/lib/data";
 
-export function Certifications() {
+export function Certifications({ showHeading = true }: { showHeading?: boolean } = {}) {
   const [active, setActive] = useState<Certification | null>(null);
 
   return (
     <section id="certifications" className="section-pad relative">
       <div className="container-shell">
-        <SectionHeading
-          eyebrow="Certifications"
-          title="Continuously Learning. Continuously Growing as a Digital Marketing Professional"
-          description="Formal training across SEO, technical SEO, Google Ads, and Meta Ads click any certificate to view it in full."
-          align="center"
-          className="mb-16"
-        />
+        {showHeading && (
+          <SectionHeading
+            eyebrow="Certifications"
+            title="Continuously Learning. Continuously Growing as a Digital Marketing Professional"
+            description="Formal training across SEO, technical SEO, Google Ads, and Meta Ads click any certificate to view it in full."
+            align="center"
+            className="mb-16"
+          />
+        )}
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {certifications.map((cert, i) => (

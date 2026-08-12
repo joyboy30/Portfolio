@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, Github, Briefcase, Download, ArrowUpRight, Linkedin } from "lucide-react";
+import { Mail, MessageCircle, Github, Briefcase, Download, ArrowUpRight, Linkedin } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { siteConfig } from "@/lib/site-config";
 
@@ -13,10 +13,10 @@ const contactMethods = [
     icon: Mail,
   },
   {
-    label: "Phone / WhatsApp",
-    value: siteConfig.phoneDisplay,
-    href: `tel:${siteConfig.phone}`,
-    icon: Phone,
+    label: "WhatsApp",
+    value: siteConfig.whatsappLabel,
+    href: siteConfig.whatsapp,
+    icon: MessageCircle,
   },
   {
     label: "OnlineJobs.ph",
@@ -32,19 +32,21 @@ const contactMethods = [
   },
 ];
 
-export function Contact() {
+export function Contact({ showHeading = true }: { showHeading?: boolean } = {}) {
   return (
     <section id="contact" className="section-pad relative overflow-hidden">
       <div className="pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-accent/15 blur-[140px]" />
 
       <div className="container-shell relative">
-        <SectionHeading
-          eyebrow="Contact"
-          title="Let's improve your search visibility."
-          description="Whether it's a full SEO audit, ongoing SEO management, or a Google/Meta Ads campaign — tell me about your business and I'll get back to you within 24 hours."
-          align="center"
-          className="mb-16"
-        />
+        {showHeading && (
+          <SectionHeading
+            eyebrow="Contact"
+            title="Let's improve your search visibility."
+            description="Whether it's a full SEO audit, ongoing SEO management, or a Google/Meta Ads campaign — tell me about your business and I'll get back to you within 24 hours."
+            align="center"
+            className="mb-16"
+          />
+        )}
 
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-2">
           {contactMethods.map((method, i) => (

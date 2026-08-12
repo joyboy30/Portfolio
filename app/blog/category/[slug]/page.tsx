@@ -655,7 +655,7 @@ export default async function CategoryPage({
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                   <Link
-                    href="/#contact"
+                    href="/contact"
                     className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-zinc-100 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.08]"
                   >
                     Contact Us
@@ -753,14 +753,14 @@ export default async function CategoryPage({
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-400 via-violet-400 to-fuchsia-400 px-7 py-3.5 text-sm font-semibold text-zinc-950 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_50px_-10px_rgba(167,139,250,0.5)]"
               >
                 Hire Me
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-zinc-100 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.08]"
               >
                 Get Free Website Audit
@@ -771,16 +771,16 @@ export default async function CategoryPage({
               <Link href="/" className="transition-colors hover:text-zinc-300">
                 Home
               </Link>
-              <Link href="/#about" className="transition-colors hover:text-zinc-300">
+              <Link href="/about" className="transition-colors hover:text-zinc-300">
                 About
               </Link>
-              <Link href="/#case-studies" className="transition-colors hover:text-zinc-300">
+              <Link href="/case-studies" className="transition-colors hover:text-zinc-300">
                 Portfolio
               </Link>
               <Link href="/blog" className="transition-colors hover:text-zinc-300">
                 Blog
               </Link>
-              <Link href="/#contact" className="transition-colors hover:text-zinc-300">
+              <Link href="/contact" className="transition-colors hover:text-zinc-300">
                 Contact Us
               </Link>
             </div>
@@ -798,20 +798,20 @@ export default async function CategoryPage({
               <Link href="/" className="transition-colors hover:text-zinc-300">
                 Home
               </Link>
-              <Link href="/#about" className="transition-colors hover:text-zinc-300">
+              <Link href="/about" className="transition-colors hover:text-zinc-300">
                 About
               </Link>
-              <Link href="/#case-studies" className="transition-colors hover:text-zinc-300">
+              <Link href="/case-studies" className="transition-colors hover:text-zinc-300">
                 Portfolio
               </Link>
               <Link href="/blog" className="transition-colors hover:text-zinc-300">
                 Blog
               </Link>
-              <Link href="/#contact" className="transition-colors hover:text-zinc-300">
+              <Link href="/contact" className="transition-colors hover:text-zinc-300">
                 Contact Us
               </Link>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="rounded-full border border-white/15 bg-white/[0.03] px-4 py-1.5 font-medium text-zinc-100 transition-colors hover:bg-white/[0.08]"
               >
                 Hire Me

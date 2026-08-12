@@ -1,5 +1,6 @@
-import { Mail, Github, Briefcase, Linkedin } from "lucide-react";
-import { navLinks } from "@/lib/data";
+import Link from "next/link";
+import { Mail, Github, Briefcase, Linkedin, MessageCircle } from "lucide-react";
+import { footerNav, footerServiceNav } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
 
 export function Footer() {
@@ -9,13 +10,20 @@ export function Footer() {
     <footer className="relative border-t border-border">
       <div className="container-shell py-14">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-2">
-            <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold text-foreground">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent-gradient font-mono text-sm font-bold text-white">
+          <div>
+            <Link
+              href="/"
+              aria-label="Igel Cudiera — home"
+              className="flex items-center gap-2 font-display text-lg font-bold text-foreground"
+            >
+              <span
+                aria-hidden="true"
+                className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent-gradient font-mono text-sm font-bold text-white"
+              >
                 IC
               </span>
               Igel Cudiera
-            </a>
+            </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
               SEO, Google Ads, Meta Ads &amp; Digital Marketing Specialist based in{" "}
               {siteConfig.location}, helping businesses worldwide rank higher, get found, and
@@ -24,10 +32,19 @@ export function Footer() {
             <div className="mt-6 flex items-center gap-3">
               <a
                 href={`mailto:${siteConfig.email}`}
-                aria-label="Email"
+                aria-label="Email Igel Cudiera"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-border-strong text-muted transition-colors hover:border-accent/40 hover:text-accent-light"
               >
-                <Mail className="h-4 w-4" />
+                <Mail aria-hidden="true" className="h-4 w-4" />
+              </a>
+              <a
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Message Igel Cudiera on WhatsApp"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-border-strong text-muted transition-colors hover:border-accent/40 hover:text-accent-light"
+              >
+                <MessageCircle aria-hidden="true" className="h-4 w-4" />
               </a>
               <a
                 href={siteConfig.social.github}
@@ -36,7 +53,7 @@ export function Footer() {
                 aria-label="GitHub"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-border-strong text-muted transition-colors hover:border-accent/40 hover:text-accent-light"
               >
-                <Github className="h-4 w-4" />
+                <Github aria-hidden="true" className="h-4 w-4" />
               </a>
               <a
                 href={siteConfig.social.onlineJobs}
@@ -45,7 +62,7 @@ export function Footer() {
                 aria-label="OnlineJobs.ph profile"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-border-strong text-muted transition-colors hover:border-accent/40 hover:text-accent-light"
               >
-                <Briefcase className="h-4 w-4" />
+                <Briefcase aria-hidden="true" className="h-4 w-4" />
               </a>
               {siteConfig.social.linkedin && (
                 <a
@@ -55,30 +72,65 @@ export function Footer() {
                   aria-label="LinkedIn"
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-border-strong text-muted transition-colors hover:border-accent/40 hover:text-accent-light"
                 >
-                  <Linkedin className="h-4 w-4" />
+                  <Linkedin aria-hidden="true" className="h-4 w-4" />
                 </a>
               )}
             </div>
           </div>
 
-          <div>
-            <h4 className="text-sm font-semibold text-foreground">Navigate</h4>
+          <nav aria-label="Footer">
+            <h2 className="text-sm font-semibold text-foreground">Navigate</h2>
             <ul className="mt-4 space-y-2.5">
-              {navLinks.map((link) => (
+              {footerNav.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="link-underline text-sm text-muted hover:text-foreground">
+                  <Link
+                    href={link.href}
+                    className="link-underline text-sm text-muted hover:text-foreground"
+                  >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
+
+          <nav aria-label="Services">
+            <h2 className="text-sm font-semibold text-foreground">Services</h2>
+            <ul className="mt-4 space-y-2.5">
+              {footerServiceNav.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="link-underline text-sm text-muted hover:text-foreground"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground">Get in touch</h4>
+            <h2 className="text-sm font-semibold text-foreground">Get in touch</h2>
             <ul className="mt-4 space-y-2.5 text-sm text-muted">
-              <li>{siteConfig.email}</li>
-              <li>{siteConfig.phoneDisplay}</li>
+              <li>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="link-underline break-words hover:text-foreground"
+                >
+                  {siteConfig.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-underline hover:text-foreground"
+                >
+                  {siteConfig.whatsappLabel}
+                </a>
+              </li>
               <li>{siteConfig.location}</li>
             </ul>
           </div>
