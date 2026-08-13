@@ -92,18 +92,29 @@ export default function Homepage() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="bg-white/[0.03] p-6 transition-colors hover:bg-white/[0.05]"
+                className="group relative bg-white/[0.03] p-6 transition-colors hover:bg-white/[0.06]"
               >
-                <h3 className="text-base font-semibold text-foreground">
+                <h3 className="flex items-start justify-between gap-3 text-base font-semibold text-foreground transition-colors group-hover:text-accent-light">
                   {service.href ? (
-                    <Link href={service.href} className={linkClass}>
+                    <Link
+                      href={service.href}
+                      className="after:absolute after:inset-0 after:content-['']"
+                    >
                       {service.title}
                     </Link>
                   ) : (
-                    service.title
+                    <span>{service.title}</span>
                   )}
+                  {service.href ? (
+                    <span
+                      aria-hidden="true"
+                      className="mt-0.5 shrink-0 text-accent opacity-0 transition-opacity group-hover:opacity-100"
+                    >
+                      &rarr;
+                    </span>
+                  ) : null}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-2">
+                <p className="mt-3 text-sm leading-relaxed text-muted">
                   {service.body}
                 </p>
               </div>
