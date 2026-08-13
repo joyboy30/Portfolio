@@ -91,10 +91,7 @@ export const mainNav: NavItem[] = [
  * they point at. Remove a path from this list to switch it back to
  * index, follow once real portfolio content has been added.
  */
-export const noindexPaths: string[] = [
-  "/services/social-media-management",
-  "/services/email-marketing",
-];
+export const noindexPaths: string[] = [];
 
 /** Metadata `robots` value for the routes listed in `noindexPaths`. */
 export const noindexRobots = {
