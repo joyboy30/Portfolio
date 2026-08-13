@@ -53,7 +53,7 @@ export default function AboutPage() {
               {/* Text content: eyebrow, H1, description, breadcrumbs */}
               <div>
                 <PageHero
-                  eyebrow="About Me"
+                  eyebrow="About Us"
                   title="An SEO Expert in the Philippines who thinks like an engineer and writes like a marketer."
                   description="My background is in computer programming and hardware servicing, which is why I don't just run SEO checklists, I understand the systems underneath them: crawlability, indexability, site architecture, and how search engines actually discover a page before it can ever rank."
                   breadcrumbs={[
