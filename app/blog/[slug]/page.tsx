@@ -360,7 +360,7 @@ export default async function ArticlePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main id="main-content" className="relative overflow-hidden bg-[#020304] text-zinc-100">
+      <main id="main-content" className="relative overflow-hidden bg-background text-foreground">
         {/* Hero */}
         <section className="relative border-b border-white/5 px-6 pb-16 pt-28 sm:pt-36">
           <div

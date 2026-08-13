@@ -34,7 +34,6 @@ import {
   CalendarDays,
   ChevronRight,
   CompassIcon,
-  Mail,
   type LucideIcon,
 } from "lucide-react";
 
@@ -442,7 +441,7 @@ function ArticleCard({ article, accent }: { article: Article; accent: Accent }) 
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#020304] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         <span
           className={`absolute left-4 top-4 rounded-full border px-3 py-1 text-xs font-medium backdrop-blur-md ${accent.chipBorder} ${accent.chipBg} ${accent.chipText}`}
         >
@@ -563,7 +562,7 @@ export default async function CategoryPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main id="main-content" className="relative overflow-hidden bg-[#020304] text-zinc-100">
+      <main id="main-content" className="relative overflow-hidden bg-background text-foreground">
         <style>{`
           @keyframes categoryGradientShift {
             0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
@@ -679,7 +678,7 @@ export default async function CategoryPage({
               </div>
             </section>
 
-                        {/* Articles */}
+            {/* Articles */}
             <section id="articles" className="border-b border-white/5 px-6 py-24">
               <div className="mx-auto max-w-6xl">
                 <div className="mb-12 max-w-2xl">
