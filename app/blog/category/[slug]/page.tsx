@@ -175,6 +175,7 @@ const categoryData: Record<string, CategoryContent> = {
       { title: "Local Keyword Research Beyond 'Near Me'", excerpt: "Uncovering the long-tail, intent-rich searches your competitors are ignoring.", date: "Jan 28, 2026", readTime: "5 min read", image: "/images/blog/local-seo/local-keyword-research.jpg", slug: "local-keyword-research-strategy" },
       { title: "Turning Customer Reviews Into a Ranking Asset", excerpt: "A response and generation workflow that improves both trust and local visibility.", date: "Jan 11, 2026", readTime: "6 min read", image: "/images/blog/local-seo/reviews-ranking-asset.jpg", slug: "reviews-as-a-ranking-asset" },
       { title: "Local Link Building That Doesn't Feel Spammy", excerpt: "Sponsorships, partnerships, and community mentions that build authority the right way.", date: "Dec 19, 2025", readTime: "7 min read", image: "/images/blog/local-seo/local-link-building.jpg", slug: "local-link-building-strategy" },
+      { title: "Free Business Directory Listing Sites in the Philippines: Complete 2026 List", excerpt: "A complete list of free business directories and local citation sites in the Philippines to improve local visibility, NAP consistency, and search presence.", date: "Aug 13, 2026", readTime: "10 min read", image: "/images/blog/local-seo/philippines-business-directories.png", slug: "free-directory-listing-sites-philippines" },
     ],
     whyMatters: {
       heading: "Why Local SEO matters",
