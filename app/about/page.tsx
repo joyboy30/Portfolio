@@ -8,7 +8,9 @@ import { CTASection } from "@/components/cta-section";
 import { aboutHighlights, industries } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "About Igel Cudiera | SEO Expert in the Philippines",
+  title: {
+    absolute: "About Igel Cudiera | SEO Expert in the Philippines",
+  },
   description:
     "Learn about Igel Cudiera, an SEO expert in the Philippines specializing in technical SEO, local SEO, and AI Search Optimization for online businesses.",
   alternates: {

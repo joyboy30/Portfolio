@@ -12,7 +12,7 @@ export function About() {
       <div className="container-shell">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <SectionHeading
-            eyebrow="About Me"
+            eyebrow="About Us"
             title="An SEO expert who thinks like an engineer and writes like a marketer."
             description="My background is in computer programming and hardware servicing, which is why I don't just run SEO checklists, I understand the systems underneath them: crawlability, indexability, site architecture, and how search engines actually discover a page before it can ever rank."
           />
