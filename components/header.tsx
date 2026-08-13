@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { DesktopNav } from "@/components/nav/desktop-nav";
 import { MobileNav } from "@/components/nav/mobile-nav";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/site-config";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -72,10 +73,17 @@ export function Header() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <Button variant="primary" size="sm" asChild>
-              <Link href="/contact">
+              <a
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Let&apos;s Work Together{" "}
-                <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-              </Link>
+                <ArrowUpRight
+                  aria-hidden="true"
+                  className="h-3.5 w-3.5"
+                />
+              </a>
             </Button>
           </div>
 

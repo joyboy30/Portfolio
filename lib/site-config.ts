@@ -13,7 +13,7 @@ export const siteConfig = {
   // Contact methods. Email and WhatsApp only — no phone number is published
   // anywhere on the site (contact section, footer, or JSON-LD).
   email: "igel.cudiera31@gmail.com",
-  whatsapp: "https://wa.me/qr/MHR7GGFUNYJ3B1",
+  whatsapp: "https://wa.me/639196098689",
   whatsappLabel: "Let's Chat on WhatsApp",
 
   social: {
