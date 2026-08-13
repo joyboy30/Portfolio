@@ -61,7 +61,7 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
         >
           <nav
             aria-label="Mobile"
-            className="glass-card max-h-[calc(100vh-7rem)] overflow-y-auto overscroll-contain p-3 shadow-glass"
+            className="bg-[#071A3D] border border-white/10 rounded-2xl max-h-[calc(100vh-7rem)] overflow-y-auto overscroll-contain p-3 shadow-glass"
           >
             <ul className="flex flex-col gap-0.5">
               {mainNav.map((item) => (
@@ -151,7 +151,7 @@ function AccordionItem({
           aria-controls={panelId}
           aria-label={`${isOpen ? "Collapse" : "Expand"} ${item.label} menu`}
           onClick={() => onToggle(item.href)}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border-strong bg-white/[0.03] text-muted transition-colors hover:bg-white/[0.08] hover:text-foreground"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border-strong bg-[#071A3D] text-muted transition-colors hover:bg-white/[0.08] hover:text-foreground"
         >
           <ChevronDown
             aria-hidden="true"

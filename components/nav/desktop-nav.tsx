@@ -146,7 +146,7 @@ export function DesktopNav() {
               // pt-2 keeps the panel visually offset while staying inside the
               // hover area, so the pointer never crosses a dead gap.
               <div id={panelId} className="absolute left-0 top-full z-50 pt-2">
-                <ul className="glass-card w-72 overflow-visible p-2 shadow-glass">
+                <ul className="bg-[#071A3D] border border-white/10 rounded-2xl w-72 overflow-visible p-2 shadow-glass">
                   <li>
                     <Link
                       href={item.href}
@@ -266,7 +266,7 @@ function SubMenuItem({
         // left-full with no horizontal gap: the submenu shares an edge with the
         // parent item, so moving the pointer sideways never leaves the menu.
         <div id={panelId} className="absolute left-full top-0 z-50 pl-1">
-          <ul className="glass-card w-72 p-2 shadow-glass">
+          <ul className="bg-[#071A3D] border border-white/10 rounded-2xl w-72 p-2 shadow-glass">
             {item.children.map((grandchild) => {
               const grandchildActive = isActive(pathname, grandchild.href.split("#")[0]);
               return (
