@@ -713,6 +713,35 @@ export default async function CategoryPage({
               </div>
             </section>
 
+                        {/* Articles */}
+            <section id="articles" className="border-b border-white/5 px-6 py-24">
+              <div className="mx-auto max-w-6xl">
+                <div className="mb-12 max-w-2xl">
+                  <p className="mb-3 text-sm font-medium uppercase tracking-wider text-zinc-500">
+                    Articles
+                  </p>
+                  <h2 className="text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl">
+                    Latest {category.shortLabel} Insights
+                  </h2>
+                  <p className="mt-4 leading-relaxed text-zinc-400">
+                    Practical SEO strategies, insights, and actionable guidance to help
+                    businesses improve their search visibility and generate more organic
+                    traffic.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {category.articles.map((article) => (
+                    <ArticleCard
+                      key={article.slug}
+                      article={article}
+                      accent={category.accent}
+                    />
+                  ))}
+                </div>
+              </div>
+            </section>
+
             {/* Related Categories */}
             <section className="border-b border-white/5 px-6 py-24">
               <div className="mx-auto max-w-6xl">
