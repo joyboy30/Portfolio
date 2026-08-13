@@ -47,7 +47,7 @@ const ctaLinks = [
   { label: "View Case Studies", href: "/case-studies" },
   { label: "Explore SEO Services", href: "/services" },
   { label: "Read My SEO Blog", href: "/blog" },
-  { label: "Contact Me", href: "/contact" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const linkClass =
