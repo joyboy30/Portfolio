@@ -123,14 +123,7 @@ const categoryData: Record<string, CategoryContent> = {
       { title: "Search Console Analysis", description: "Reading performance and indexing data to confirm what an update actually changed.", icon: BarChart3 },
       { title: "AI Overviews", description: "How generative results are reshaping click-through behavior and what to do about it.", icon: Sparkles },
     ],
-    articles: [
-      { title: "What the March 2026 Core Update Actually Rewarded", excerpt: "A breakdown of the sites that gained and lost visibility, and the content patterns behind each outcome.", date: "Mar 18, 2026", readTime: "7 min read", image: "/images/blog/google-algorithm-updates/core-update-march.jpg", slug: "march-2026-core-update-analysis" },
-      { title: "Recovering Rankings After a Helpful Content Hit", excerpt: "A step-by-step recovery framework used across three client accounts affected by the same update.", date: "Feb 27, 2026", readTime: "9 min read", image: "/images/blog/google-algorithm-updates/helpful-content-recovery.jpg", slug: "helpful-content-recovery-framework" },
-      { title: "Spam Update Signals Every Site Owner Should Audit", excerpt: "The manipulative patterns Google's spam systems are catching first, and how to self-audit before you're flagged.", date: "Feb 09, 2026", readTime: "6 min read", image: "/images/blog/google-algorithm-updates/spam-update-signals.jpg", slug: "spam-update-audit-checklist" },
-      { title: "Reading Ranking Volatility in Search Console", excerpt: "How to separate normal fluctuation from a genuine algorithm-driven shift using Search Console data.", date: "Jan 22, 2026", readTime: "5 min read", image: "/images/blog/google-algorithm-updates/volatility-search-console.jpg", slug: "ranking-volatility-search-console" },
-      { title: "AI Overviews and the New Click-Through Reality", excerpt: "What changes when your target query triggers an AI Overview, and how to keep earning traffic anyway.", date: "Jan 06, 2026", readTime: "8 min read", image: "/images/blog/google-algorithm-updates/ai-overviews-ctr.jpg", slug: "ai-overviews-click-through-strategy" },
-      { title: "Building an Update-Resilient Content Strategy", excerpt: "Why sites built on genuine expertise recover faster, and how to structure content to withstand future updates.", date: "Dec 15, 2025", readTime: "7 min read", image: "/images/blog/google-algorithm-updates/update-resilient-strategy.jpg", slug: "update-resilient-content-strategy" },
-    ],
+    articles: [],
     whyMatters: {
       heading: "Why Google Algorithm Updates matter",
       body: [
@@ -169,12 +162,6 @@ const categoryData: Record<string, CategoryContent> = {
       { title: "Local Link Building", description: "Earning community and industry links that reinforce geographic authority.", icon: Link2 },
     ],
     articles: [
-      { title: "Google Business Profile Optimization Checklist for 2026", excerpt: "Every field, category, and posting habit that moves the needle for local map pack visibility.", date: "Mar 21, 2026", readTime: "8 min read", image: "/images/blog/local-seo/gbp-checklist-2026.jpg", slug: "gbp-optimization-checklist-2026" },
-      { title: "How Local Citations Still Influence Map Rankings", excerpt: "Why NAP consistency across directories remains a foundational local ranking factor.", date: "Mar 04, 2026", readTime: "6 min read", image: "/images/blog/local-seo/local-citations-influence.jpg", slug: "local-citations-map-rankings" },
-      { title: "Winning the Map Pack for Multi-Location Businesses", excerpt: "A location-page and citation strategy built for businesses serving more than one city.", date: "Feb 12, 2026", readTime: "9 min read", image: "/images/blog/local-seo/multi-location-map-pack.jpg", slug: "multi-location-map-pack-strategy" },
-      { title: "Local Keyword Research Beyond 'Near Me'", excerpt: "Uncovering the long-tail, intent-rich searches your competitors are ignoring.", date: "Jan 28, 2026", readTime: "5 min read", image: "/images/blog/local-seo/local-keyword-research.jpg", slug: "local-keyword-research-strategy" },
-      { title: "Turning Customer Reviews Into a Ranking Asset", excerpt: "A response and generation workflow that improves both trust and local visibility.", date: "Jan 11, 2026", readTime: "6 min read", image: "/images/blog/local-seo/reviews-ranking-asset.jpg", slug: "reviews-as-a-ranking-asset" },
-      { title: "Local Link Building That Doesn't Feel Spammy", excerpt: "Sponsorships, partnerships, and community mentions that build authority the right way.", date: "Dec 19, 2025", readTime: "7 min read", image: "/images/blog/local-seo/local-link-building.jpg", slug: "local-link-building-strategy" },
       { title: "Free Business Directory Listing Sites in the Philippines: Complete 2026 List", excerpt: "A complete list of free business directories and local citation sites in the Philippines to improve local visibility, NAP consistency, and search presence.", date: "Aug 13, 2026", readTime: "10 min read", image: "/images/blog/local-seo/philippines-business-directories.png", slug: "free-directory-listing-sites-philippines" },
     ],
     whyMatters: {
@@ -214,14 +201,7 @@ const categoryData: Record<string, CategoryContent> = {
       { title: "Schema Markup", description: "Structured data that helps search engines understand and richly display your content.", icon: Braces },
       { title: "Crawl Budget", description: "Making sure search engines spend their crawl time on pages that actually matter.", icon: Bug },
     ],
-    articles: [
-      { title: "A Practical Core Web Vitals Checklist for 2026", excerpt: "The specific fixes that move LCP, INP, and CLS without a full site rebuild.", date: "Mar 25, 2026", readTime: "9 min read", image: "/images/blog/technical-seo/core-web-vitals-checklist.jpg", slug: "core-web-vitals-checklist-2026" },
-      { title: "Site Architecture That Scales Past 10,000 Pages", excerpt: "Category, tagging, and internal linking structures that keep large sites crawlable.", date: "Mar 09, 2026", readTime: "8 min read", image: "/images/blog/technical-seo/site-architecture-scale.jpg", slug: "site-architecture-at-scale" },
-      { title: "Robots.txt Mistakes That Quietly Kill Indexing", excerpt: "The most common disallow rules that block pages site owners actually want ranked.", date: "Feb 20, 2026", readTime: "5 min read", image: "/images/blog/technical-seo/robots-txt-mistakes.jpg", slug: "robots-txt-common-mistakes" },
-      { title: "XML Sitemaps: What to Include and What to Cut", excerpt: "Keeping sitemaps lean and accurate so Google trusts every URL you submit.", date: "Feb 03, 2026", readTime: "6 min read", image: "/images/blog/technical-seo/xml-sitemap-strategy.jpg", slug: "xml-sitemap-best-practices" },
-      { title: "Schema Markup Types Worth Implementing First", excerpt: "Prioritizing structured data by the rich results it's most likely to unlock.", date: "Jan 17, 2026", readTime: "7 min read", image: "/images/blog/technical-seo/schema-markup-priority.jpg", slug: "schema-markup-priority-guide" },
-      { title: "Managing Crawl Budget on Large E-Commerce Sites", excerpt: "Faceted navigation, pagination, and parameter handling that protect crawl efficiency.", date: "Dec 22, 2025", readTime: "8 min read", image: "/images/blog/technical-seo/crawl-budget-ecommerce.jpg", slug: "crawl-budget-ecommerce-strategy" },
-    ],
+    articles: [],
     whyMatters: {
       heading: "Why Technical SEO matters",
       body: [
@@ -259,14 +239,7 @@ const categoryData: Record<string, CategoryContent> = {
       { title: "Entity SEO", description: "Establishing your brand as a recognized entity search engines trust and reference.", icon: Tags },
       { title: "AI Citations", description: "The content patterns that consistently earn mentions inside AI-generated answers.", icon: Quote },
     ],
-    articles: [
-      { title: "How to Get Cited in Google AI Overviews", excerpt: "The content structure and formatting patterns behind consistent AI Overview citations.", date: "Mar 30, 2026", readTime: "8 min read", image: "/images/blog/ai-search-optimization/ai-overviews-citations.jpg", slug: "get-cited-google-ai-overviews" },
-      { title: "Optimizing Content for ChatGPT Search Visibility", excerpt: "What conversational AI models look for when selecting and summarizing a source.", date: "Mar 14, 2026", readTime: "7 min read", image: "/images/blog/ai-search-optimization/chatgpt-search-visibility.jpg", slug: "chatgpt-search-visibility-guide" },
-      { title: "Generative Engine Optimization: A Practical Framework", excerpt: "A repeatable process for making content discoverable across multiple AI answer engines at once.", date: "Feb 24, 2026", readTime: "9 min read", image: "/images/blog/ai-search-optimization/geo-framework.jpg", slug: "generative-engine-optimization-framework" },
-      { title: "Semantic Search: Writing for Meaning, Not Just Keywords", excerpt: "How to structure topics so AI systems understand intent beyond exact-match phrasing.", date: "Feb 07, 2026", readTime: "6 min read", image: "/images/blog/ai-search-optimization/semantic-search-writing.jpg", slug: "semantic-search-content-strategy" },
-      { title: "Entity SEO: Becoming a Source AI Models Trust", excerpt: "Building the consistent brand and authorship signals that strengthen entity recognition.", date: "Jan 20, 2026", readTime: "7 min read", image: "/images/blog/ai-search-optimization/entity-seo-trust.jpg", slug: "entity-seo-brand-trust" },
-      { title: "The Content Patterns Behind Every AI Citation", excerpt: "Analyzing dozens of AI-generated answers to find what earned pages a citation.", date: "Jan 03, 2026", readTime: "8 min read", image: "/images/blog/ai-search-optimization/ai-citation-patterns.jpg", slug: "ai-citation-content-patterns" },
-    ],
+    articles: [],
     whyMatters: {
       heading: "Why AI Search Optimization matters",
       body: [
@@ -304,14 +277,7 @@ const categoryData: Record<string, CategoryContent> = {
       { title: "Keyword Mapping", description: "Assigning the right keyword intent to the right page, without cannibalization.", icon: MapIcon },
       { title: "Internal Linking", description: "Connecting content clusters so authority flows to the pages that need it most.", icon: Link2 },
     ],
-    articles: [
-      { title: "Building a Content Cluster Strategy From Scratch", excerpt: "A pillar-and-cluster framework that turns scattered blog posts into topical authority.", date: "Apr 02, 2026", readTime: "8 min read", image: "/images/blog/content-marketing/content-cluster-strategy.jpg", slug: "content-cluster-strategy-guide" },
-      { title: "How Topical Authority Actually Gets Built", excerpt: "Why depth and consistency on a subject outperform isolated, high-volume keyword targeting.", date: "Mar 16, 2026", readTime: "7 min read", image: "/images/blog/content-marketing/topical-authority-guide.jpg", slug: "how-topical-authority-is-built" },
-      { title: "Semantic SEO: Covering a Topic Completely", excerpt: "Mapping subtopics and questions so a single page satisfies every related search intent.", date: "Feb 28, 2026", readTime: "6 min read", image: "/images/blog/content-marketing/semantic-seo-coverage.jpg", slug: "semantic-seo-topic-coverage" },
-      { title: "Demonstrating EEAT in Competitive Niches", excerpt: "Practical author bios, sourcing, and credentialing signals that strengthen trust.", date: "Feb 11, 2026", readTime: "7 min read", image: "/images/blog/content-marketing/eeat-competitive-niches.jpg", slug: "demonstrating-eeat-content" },
-      { title: "Keyword Mapping Without Cannibalizing Your Own Pages", excerpt: "A one-keyword-per-page system that keeps intent clear across a growing site.", date: "Jan 25, 2026", readTime: "6 min read", image: "/images/blog/content-marketing/keyword-mapping-system.jpg", slug: "keyword-mapping-without-cannibalization" },
-      { title: "Internal Linking Strategies That Move Rankings", excerpt: "Using internal links deliberately to pass authority to the pages that need it most.", date: "Jan 08, 2026", readTime: "5 min read", image: "/images/blog/content-marketing/internal-linking-strategy.jpg", slug: "internal-linking-strategy-guide" },
-    ],
+    articles: [],
     whyMatters: {
       heading: "Why Content Marketing matters",
       body: [
