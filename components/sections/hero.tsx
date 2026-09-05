@@ -72,7 +72,7 @@ export function Hero() {
             className="eyebrow"
           >
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-accent" />
-            Igel Cudiera · Available for projects and full-time roles
+            Available for projects, part-time and full-time roles
           </motion.div>
 
           <motion.h1
