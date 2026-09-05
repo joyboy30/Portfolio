@@ -1,5 +1,35 @@
 import Link from "next/link";
 
+/* ------------------------------------------------------------------ */
+/* Types                                                               */
+/* ------------------------------------------------------------------ */
+
+interface ServiceCard {
+  title: string;
+  href?: string;
+  body: string;
+}
+
+interface CitationGroup {
+  label: string;
+  queries: string[];
+  note: string;
+}
+
+interface Credential {
+  kind: "Training" | "Education";
+  detail: string;
+}
+
+interface Faq {
+  question: string;
+  answer: string;
+}
+
+/* ------------------------------------------------------------------ */
+/* Data                                                                */
+/* ------------------------------------------------------------------ */
+
 /**
  * Homepage service cards.
  *
@@ -8,84 +38,426 @@ import Link from "next/link";
  * it stays plain text. Add a path there later and it becomes a link with no
  * other changes needed.
  */
-const services: { title: string; href?: string; body: string }[] = [
+const services: ServiceCard[] = [
   {
     title: "Technical SEO",
     href: "/services/seo/technical-seo",
-    body: "Crawlability, indexability, site architecture, Core Web Vitals, and structured data: the layer everything else depends on.",
+    body: "Crawlability, indexability, site architecture, Core Web Vitals, and structured data. The layer everything else sits on.",
   },
   {
     title: "On-Page SEO",
     href: "/services/seo/on-page-seo",
-    body: "Search intent mapping, heading hierarchy, internal linking, and content built to answer the question a searcher actually asked.",
-  },
-  {
-    title: "Off-Page SEO",
-    href: "/services/seo/off-page-seo",
-    body: "Link building, citation building, and the third-party corroboration that tells search engines a brand is established and real.",
+    body: "Search intent mapping, heading structure, internal linking, and content that answers the question someone actually typed.",
   },
   {
     title: "Local SEO",
     href: "/services/seo/local-seo",
-    body: "Google Business Profile management, NAP consistency, citations, and location pages that match how nearby customers search.",
+    body: "Google Business Profile management, NAP consistency, citations, and location pages that match how nearby customers phrase things.",
   },
   {
-    title: "E-commerce SEO",
-    href: undefined, // no dedicated route yet
-    body: "Category and product page optimization, faceted navigation issues, duplicate content, and transactional keyword coverage.",
+    title: "Off-Page SEO",
+    href: "/services/seo/off-page-seo",
+    body: "Link building, citation building, and the third-party corroboration that tells search engines a brand is real.",
   },
   {
     title: "AI Search Optimization",
     href: "/services/seo/ai-search-optimization",
-    body: "Structuring content and entity signals for AI Overviews and ChatGPT Search, layered on top of a technically sound site.",
+    body: "Structuring content and entity signals for AI Overviews and ChatGPT Search, on top of a technically sound site.",
+  },
+  {
+    title: "E-commerce SEO",
+    href: undefined,
+    body: "Category and product page optimisation, faceted navigation, duplicate content from filtering, and transactional keyword coverage.",
   },
 ];
 
-const ctaLinks = [
-  { label: "About Me", href: "/about" },
-  { label: "My Experience", href: "/experience" },
-  { label: "View Case Studies", href: "/case-studies" },
-  { label: "Explore SEO Services", href: "/services" },
-  { label: "Read My SEO Blog", href: "/blog" },
-  { label: "Contact Us", href: "/contact" },
+const citationGroups: CitationGroup[] = [
+  {
+    label: "Real estate, Northern Virginia and neighbouring markets",
+    queries: [
+      "How much does selling a house in Loudoun County really cost",
+      "Are sellers more willing to negotiate in Northern Virginia",
+      "Is it harder to sell a townhouse or single-family home in Prince William County",
+      "When is the best time to sell a house in Baltimore County",
+    ],
+    note: "Plus four more, listed in full on the case studies page.",
+  },
+  {
+    label: "Dental, Saint Bonifacius, Minnesota",
+    queries: [
+      "Dentist in Saint Bonifacius MN",
+      "How much does a dental cleaning cost in Saint Bonifacius MN",
+    ],
+    note: "Both cited in Google AI Overviews and in ChatGPT answers.",
+  },
+  {
+    label: "Business brokerage, multiple US cities",
+    queries: [
+      "How do I sell my business in Los Angeles",
+      "What is the best way to sell a small business in Los Angeles",
+      "How do I sell my business in Las Vegas",
+      "How can I find a buyer for my business in Atlanta GA",
+    ],
+    note: "Cited in Google AI Overviews.",
+  },
+  {
+    label: "Restaurants, Florida and North Carolina",
+    queries: [
+      "What is the best Italian restaurant in Davidson NC",
+      "What are the best gourmet desserts to try in Grayton Beach",
+    ],
+    note: "Both cited in Google AI Overviews and ChatGPT.",
+  },
 ];
+
+const credentials: Credential[] = [
+  { kind: "Training", detail: "Online SEO Bootcamp, Pinoy SEO, May 2023" },
+  { kind: "Training", detail: "SEO Sprint, SEO Workout, 2025" },
+  { kind: "Training", detail: "Technical SEO, SEO Workout, 2025" },
+  {
+    kind: "Training",
+    detail: "Google Ads Training, Inspired Filipino Freelancers, September 2023",
+  },
+  {
+    kind: "Training",
+    detail: "Facebook Ads Management, ProVA Virtual Assistant, November 2023",
+  },
+  {
+    kind: "Education",
+    detail:
+      "Cebu Normal University, Computer Programming and Hardware Servicing, 2011 to 2012",
+  },
+];
+
+const tools: string[] = [
+  "Ahrefs",
+  "SEMrush",
+  "Screaming Frog",
+  "Google Search Console",
+  "Google Analytics 4",
+  "Looker Studio",
+  "WordPress",
+  "Shopify",
+  "Duda",
+  "Google Business Profile",
+  "Google Ads",
+  "Meta Ads Manager",
+];
+
+const faqs: Faq[] = [
+  {
+    question: "Do you work with businesses outside Cebu?",
+    answer:
+      "Most of my client work has been in the United States, so yes. I am based in Cebu and work remotely, and the working day is already built around US hours. For clients in Cebu or elsewhere in the Philippines, meetings run on your schedule.",
+  },
+  {
+    question: "What does it cost?",
+    answer:
+      "It depends on scope, which is not a dodge so much as the actual answer. A single-location practice needing local SEO and an e-commerce store needing technical plus content work require very different amounts of work. A one-time technical audit is the cheapest way in and the fastest way to find out whether a longer engagement makes sense.",
+  },
+  {
+    question: "How long before I see anything?",
+    answer:
+      "Most campaigns show measurable movement in three to six months, with the compounding results usually between six and twelve. Local SEO moves faster, because Google Business Profile and citation work can affect map pack visibility within weeks. Sites with real technical problems need those fixed first, which adds time at the front. In my own case studies the range has been wide: a flower shop with no prior web presence had indexed, search-visible pages within weeks of setup, while the dental accounts were sustained programs measured over months.",
+  },
+  {
+    question: "Do I work with you or a team?",
+    answer:
+      "Me. There is no team. That is the main advantage and also the main limit: you get one accountable person from audit through reporting, and I can only take on a certain number of accounts at once without the quality dropping.",
+  },
+  {
+    question: "Can you guarantee I will show up in Google AI Overviews?",
+    answer:
+      "No, and neither can anyone else. Google does not publish how AI Overviews select sources and the selection changes. What can be improved is whether your content is structured, technically accessible, and clear enough about what your business is for a system to pick it up. That has worked repeatedly across client accounts, which is different from a guarantee.",
+  },
+  {
+    question: "What do you need from me to start?",
+    answer:
+      "The domain, the searches you want to win, and Search Console and Analytics access when you are ready. That is enough for a first read. If you do not have Search Console set up, that is one of the first things I would fix anyway.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
+/* ------------------------------------------------------------------ */
+/* Shared class tokens                                                 */
+/* ------------------------------------------------------------------ */
 
 const linkClass =
   "text-accent-light underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent";
 
+const buttonPrimaryClass =
+  "rounded-full border border-accent bg-accent/10 px-5 py-2.5 text-sm font-medium text-accent-light transition-colors hover:bg-accent/20";
+
+const buttonSecondaryClass =
+  "rounded-full border border-border-strong px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent-light";
+
+const eyebrowClass = "text-sm font-medium uppercase tracking-widest text-accent";
+
+const h2Class =
+  "mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl";
+
+/* ------------------------------------------------------------------ */
+/* Component                                                           */
+/* ------------------------------------------------------------------ */
+
 export default function Homepage() {
   return (
     <>
-      {/* SEO services positioning */}
+      {/* SECTION 3: SELECTED RESULTS */}
       <section className="relative py-20 sm:py-24">
         <div className="container-shell">
-          <p className="text-sm font-medium uppercase tracking-widest text-accent">
-            What I Do
-          </p>
+          <p className={eyebrowClass}>Selected results</p>
 
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Professional SEO services, handled by one specialist.
-          </h2>
+          <h2 className={h2Class}>What the work has actually produced.</h2>
 
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-            I work as a freelance SEO specialist in the Philippines, which means
-            you talk to the person doing the work. No account manager relaying
-            questions to a team you never meet. Every audit, every technical fix,
-            and every piece of keyword research comes from the same hands, and if
-            something is not working, I will tell you that instead of padding a
-            monthly report.
+            Two accounts, with the periods they cover and where the figures came
+            from. The full set, including six more dental accounts and the AI
+            citation records, is on{" "}
+            <Link href="/case-studies" className={linkClass}>
+              the case studies page
+            </Link>
+            .
           </p>
 
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
-            My background is in computer programming and hardware servicing, so I
-            start where most engagements should: the technical layer. Once a site
-            can actually be crawled, indexed, and understood, content and
-            authority work has something solid to build on. You can see the full
-            range of my{" "}
-            <Link href="/services/seo" className={linkClass}>
-              SEO services
-            </Link>{" "}
-            if you want the detailed version.
+          <div className="mt-12 space-y-8">
+            <article className="glass-card rounded-2xl border border-border-strong p-8 sm:p-10">
+              <h3 className="text-xl font-semibold text-foreground sm:text-2xl">
+                Wincrest Orthodontics, dental, United States
+              </h3>
+
+              <dl className="mt-6 grid gap-6 lg:grid-cols-2">
+                <div>
+                  <dt className="text-sm font-semibold text-accent-light">
+                    The problem
+                  </dt>
+                  <dd className="mt-2 leading-relaxed text-muted">
+                    An orthodontic practice already running an SEO program, with
+                    organic traffic that had grown but plateaued.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="text-sm font-semibold text-accent-light">
+                    What I did
+                  </dt>
+                  <dd className="mt-2 leading-relaxed text-muted">
+                    Keyword optimisation across service and location pages, guest
+                    post link building, and technical cleanup including broken
+                    link repair and 404 resolution.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="text-sm font-semibold text-accent-light">
+                    Period
+                  </dt>
+                  <dd className="mt-2 leading-relaxed text-muted">
+                    January 2024 to May 2024, as part of the MyPortal Marketing
+                    agency portfolio.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="text-sm font-semibold text-accent-light">
+                    Source
+                  </dt>
+                  <dd className="mt-2 leading-relaxed text-muted">
+                    Traffic reports and Ahrefs data, both on the case studies
+                    page.
+                  </dd>
+                </div>
+              </dl>
+
+              <p className="mt-8 max-w-3xl leading-relaxed text-muted">
+                The account reached 1,705 monthly organic visits in May 2024. It
+                was at 224 in June 2022, when the client&rsquo;s SEO program
+                began. I took the account over in January 2024 and owned it
+                through May 2024, so the portion of that growth I can claim is
+                the final stretch rather than the whole arc.
+              </p>
+            </article>
+
+            <article className="glass-card rounded-2xl border border-border-strong p-8 sm:p-10">
+              <h3 className="text-xl font-semibold text-foreground sm:text-2xl">
+                The Jamil Brothers Realty Group, real estate, Northern Virginia
+              </h3>
+
+              <dl className="mt-6 grid gap-6 lg:grid-cols-2">
+                <div>
+                  <dt className="text-sm font-semibold text-accent-light">
+                    The problem
+                  </dt>
+                  <dd className="mt-2 leading-relaxed text-muted">
+                    A real estate team with existing blog content that was
+                    competing against itself for overlapping seller-intent
+                    queries, and was not being picked up by AI answer engines for
+                    the searches their clients were actually making.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="text-sm font-semibold text-accent-light">
+                    What I did
+                  </dt>
+                  <dd className="mt-2 leading-relaxed text-muted">
+                    Built new content around specific seller-intent topics
+                    including home equity, downsizing, and county-level selling
+                    costs. Reoptimised existing posts for heading hierarchy and
+                    search intent. Resolved keyword cannibalisation by
+                    consolidating overlapping posts and 301-redirecting the
+                    weaker ones. Fixed FAQ schema validation errors. Repaired
+                    broken internal links. Built directory and outreach authority
+                    signals.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="text-sm font-semibold text-accent-light">
+                    Period
+                  </dt>
+                  <dd className="mt-2 leading-relaxed text-muted">
+                    April 2026 to July 2026.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="text-sm font-semibold text-accent-light">
+                    Result
+                  </dt>
+                  <dd className="mt-2 leading-relaxed text-muted">
+                    Pages were cited in Google AI Overviews for eight named
+                    seller-intent queries across Fairfax County, Loudoun County,
+                    Prince William County, Baltimore County, Columbia MD and West
+                    Virginia. Seven of the eight also appeared in
+                    ChatGPT-generated answers.
+                  </dd>
+                </div>
+              </dl>
+
+              <p className="mt-8 max-w-3xl leading-relaxed text-muted">
+                The pattern held across counties, which suggests it was the
+                method rather than one lucky page. Specific beat general every
+                time: a post answering how to sell a house that needs repairs in
+                West Virginia was picked up where a generic guide to selling your
+                home would not have been.
+              </p>
+            </article>
+          </div>
+
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-lg leading-relaxed text-muted">
+              Want the same thing looked at on your site?
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/case-studies" className={buttonSecondaryClass}>
+                View the full case studies
+              </Link>
+              <Link href="/contact" className={buttonPrimaryClass}>
+                Send me your site
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: AI SEARCH CITATIONS */}
+      <section className="relative py-16 sm:py-20">
+        <div className="container-shell">
+          <div className="glass-card rounded-2xl border border-border-strong p-8 sm:p-10">
+            <p className={eyebrowClass}>AI search</p>
+
+            <h2 className={h2Class}>
+              Where client pages have been cited in AI answers.
+            </h2>
+
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
+              When someone asks Google or ChatGPT a question instead of typing a
+              keyword, the answer is assembled from a handful of sources and only
+              some of them get named. Getting named is a different job from
+              ranking, and it is measurable in the sense that you can go and
+              check.
+            </p>
+
+            <p className="mt-4 max-w-3xl leading-relaxed text-muted">
+              Below are searches where pages I worked on were cited. These are
+              the queries themselves, not a summary of them.
+            </p>
+
+            <div className="mt-10 grid gap-8 md:grid-cols-2">
+              {citationGroups.map((group) => (
+                <div key={group.label}>
+                  <h3 className="text-base font-semibold text-accent-light">
+                    {group.label}
+                  </h3>
+                  <ul className="mt-4 space-y-2">
+                    {group.queries.map((query) => (
+                      <li
+                        key={query}
+                        className="rounded-lg border border-border px-4 py-2.5 text-sm leading-relaxed text-muted"
+                      >
+                        {query}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-3 text-sm text-muted-2">{group.note}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 rounded-2xl border border-border bg-white/[0.03] p-6 sm:p-8">
+              <h3 className="text-base font-semibold text-foreground">
+                The honest part
+              </h3>
+              <p className="mt-3 max-w-3xl leading-relaxed text-muted">
+                Nobody controls what an AI system decides to cite. Anyone
+                promising a guaranteed spot in AI Overviews or a guaranteed
+                mention in ChatGPT is selling something they cannot deliver. What
+                can be improved is the structure, technical accessibility and
+                entity clarity of the content, which is what makes citation more
+                likely when the opportunity comes up.
+              </p>
+              <p className="mt-4 max-w-3xl leading-relaxed text-muted">
+                The pattern that has worked: pick a specific answerable query
+                rather than a broad one, answer it in the first two sentences of
+                the page, support it with detail that is actually local or
+                actually specific, and make sure the page is not competing with
+                three others on the same site.
+              </p>
+            </div>
+
+            <p className="mt-8 text-sm leading-relaxed text-muted-2">
+              Every cited query across all seven client sites is listed in{" "}
+              <Link href="/case-studies" className={linkClass}>
+                the full citation records
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: WHAT I DO */}
+      <section className="relative py-16 sm:py-20">
+        <div className="container-shell">
+          <p className={eyebrowClass}>Services</p>
+
+          <h2 className={h2Class}>What I do.</h2>
+
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
+            You talk to the person doing the work. Every audit, technical fix and
+            keyword brief comes from the same hands, and if something is not
+            working I will tell you rather than pad a monthly report. Scope gets
+            built around what a site actually needs rather than a fixed package.
           </p>
 
           <div className="glass-card mt-12 rounded-2xl border border-border-strong p-8 sm:p-10">
@@ -119,197 +491,449 @@ export default function Homepage() {
               ))}
             </div>
           </div>
+
+          <p className="mt-8 max-w-3xl leading-relaxed text-muted-2">
+            Organic search is the core of the work. When a business needs
+            visibility before that compounds, I also run{" "}
+            <Link href="/services/paid-ads" className={linkClass}>
+              Google Ads and Meta Ads campaigns
+            </Link>{" "}
+            end to end.
+          </p>
         </div>
       </section>
 
-      {/* Who I help */}
+      {/* SECTION 6: BASED IN CEBU */}
+      <section className="relative py-16 sm:py-20">
+        <div className="container-shell">
+          <p className={eyebrowClass}>Location</p>
+
+          <h2 className={h2Class}>
+            Based in Cebu, working with clients across several time zones.
+          </h2>
+
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            <div className="space-y-5">
+              <p className="leading-relaxed text-muted">
+                I am an SEO specialist in Cebu, based in Medellin in the north of
+                the province, and most of my client work has been for businesses
+                in the United States. That combination is worth being clear
+                about, because it cuts both ways.
+              </p>
+
+              <p className="leading-relaxed text-muted">
+                Working with US accounts means my day is already built around a
+                different time zone, and it means most of the local SEO work I
+                have done has been in markets I had to learn from the search data
+                rather than from living there. That is a real constraint and it
+                makes you rigorous about it: you cannot assume you know how
+                people in Saint Bonifacius, Minnesota search for a dentist, so
+                you go and find out.
+              </p>
+            </div>
+
+            <div className="space-y-5">
+              <p className="leading-relaxed text-muted">
+                For a business in Cebu City, Mandaue, Lapu-Lapu or anywhere else
+                in the province, the practical difference is that the work
+                happens remotely and the meetings happen on your schedule rather
+                than mine. The{" "}
+                <Link href="/services/seo/local-seo" className={linkClass}>
+                  local SEO work
+                </Link>{" "}
+                itself is the same discipline it is anywhere: getting the Google
+                Business Profile categories, services and posting right, making
+                sure the business name, address and phone number match across
+                every directory that lists you, building location and service
+                pages that use the phrasing people here actually search with, and
+                watching what shows up in the map pack rather than guessing at
+                it.
+              </p>
+
+              <div className="rounded-2xl border border-border bg-white/[0.03] p-6">
+                <p className="leading-relaxed text-muted">
+                  If you are a Cebu business, one thing worth knowing before you
+                  hire anyone: I have not yet documented a Philippine client
+                  engagement on this site. The dental, real estate, brokerage and
+                  restaurant work is all overseas. I would rather say that than
+                  let you assume otherwise.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7: WHO I WORK WITH */}
       <section className="relative py-16 sm:py-20">
         <div className="container-shell">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Who I work with.
           </h2>
 
-          <div className="mt-8 grid gap-10 lg:grid-cols-2">
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
+            Most of my work has been with local and service-area businesses,
+            dental practices, real estate teams, and e-commerce stores. The
+            pattern across them: commercial intent concentrated in a small number
+            of pages, and technical problems quietly capping what those pages can
+            do.
+          </p>
+
+          <div className="mt-10 grid gap-10 lg:grid-cols-3">
             <div>
               <h3 className="text-lg font-semibold text-accent-light">
                 Local and service-area businesses
               </h3>
               <p className="mt-3 leading-relaxed text-muted">
-                Dental practices, clinics, contractors, restaurants, and other
-                businesses that live or die by proximity searches. The work here
-                is practical: Google Business Profile optimization, consistent
-                citations, and service pages written the way people in that area
-                actually phrase a search. Service-area businesses without a
-                walk-in storefront need a slightly different setup, and that is
-                worth getting right early.
+                Dental practices, clinics, restaurants, contractors. Google
+                Business Profile, citations, and service pages written the way
+                people in that area actually search. Service-area businesses
+                without a walk-in address need a different setup, and it is worth
+                getting right early.
               </p>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold text-accent-light">
-                E-commerce brands
+                E-commerce
               </h3>
               <p className="mt-3 leading-relaxed text-muted">
-                Product and category pages carry most of the commercial intent on
-                an online store, and they are also where technical problems tend
-                to hide: thin variants, duplicate URLs from filtering, and
-                templates that never got proper title or schema treatment.
-                E-commerce SEO is as much cleanup as it is content.
+                Category and product pages carry most of the commercial intent
+                and hide most of the technical problems: thin variants, duplicate
+                URLs from filtering, templates that never got proper title or
+                schema treatment.
               </p>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold text-accent-light">
-                Businesses targeting a national audience
+                Businesses competing beyond one city
               </h3>
               <p className="mt-3 leading-relaxed text-muted">
-                Competing beyond one city usually means building topical depth
-                rather than chasing single keywords. That looks like content
-                clusters, clean internal linking, and resolving pages that quietly
-                compete with each other for the same query.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-accent-light">
-                Businesses selling internationally
-              </h3>
-              <p className="mt-3 leading-relaxed text-muted">
-                International and global SEO adds its own layer: hreflang,
-                regional targeting, language and currency variants, and search
-                behaviour that shifts by market. I already work remotely across
-                time zones, which makes this a natural fit rather than an
-                exception.
+                Usually a topical depth problem rather than a keyword problem.
+                Content clusters, clean internal linking, and untangling pages
+                that compete with each other.
               </p>
             </div>
           </div>
 
           <p className="mt-10 max-w-3xl leading-relaxed text-muted-2">
-            Across all of them the goal is the same: organic visibility that turns
-            into qualified traffic and real enquiries, tracked in Google Search
-            Console, GA4, and Looker Studio so you can see what changed and why.
-            Organic search is the core of what I do, though when a business needs
-            visibility before that compounds, I also run{" "}
-            <Link href="/services/paid-ads" className={linkClass}>
-              Google Ads
-            </Link>{" "}
-            and{" "}
-            <Link href="/services/meta-ads" className={linkClass}>
-              Meta Ads
-            </Link>{" "}
-            campaigns end to end.
+            Across all of them the measurement is the same: Google Search
+            Console, GA4 and Looker Studio, so you can see what changed and when.
           </p>
         </div>
       </section>
 
-      {/* AI Search Optimization */}
+      {/* SECTION 8: HOW AN ENGAGEMENT RUNS */}
+      <section className="relative py-16 sm:py-20">
+        <div className="container-shell">
+          <p className={eyebrowClass}>Process</p>
+
+          <h2 className={h2Class}>How an engagement runs.</h2>
+
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
+            The order matters more than the list. Fixing content on a site that
+            cannot be crawled properly is wasted work, so the technical pass
+            comes first.
+          </p>
+
+          <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <li>
+              <p className="text-sm font-medium tabular-nums text-accent">01</p>
+              <h3 className="mt-2 text-base font-semibold text-foreground">
+                Audit
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-2">
+                <Link href="/services/seo/technical-seo" className={linkClass}>
+                  A full technical pass
+                </Link>{" "}
+                first: crawlability, indexability, robots and canonical rules,
+                Core Web Vitals, broken links, and pages competing with each
+                other. The output is a prioritised list, not every warning a
+                crawler produced.
+              </p>
+            </li>
+
+            <li>
+              <p className="text-sm font-medium tabular-nums text-accent">02</p>
+              <h3 className="mt-2 text-base font-semibold text-foreground">
+                Research
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-2">
+                What the business sells, who is already ranking for it, and what
+                people actually type. Search demand mapped to the pages that
+                should own it.
+              </p>
+            </li>
+
+            <li>
+              <p className="text-sm font-medium tabular-nums text-accent">03</p>
+              <h3 className="mt-2 text-base font-semibold text-foreground">
+                Fix
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-2">
+                The technical items from the audit, in impact order. Redirects,
+                indexing problems, schema errors, internal link repair.
+              </p>
+            </li>
+
+            <li>
+              <p className="text-sm font-medium tabular-nums text-accent">04</p>
+              <h3 className="mt-2 text-base font-semibold text-foreground">
+                Build
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-2">
+                On-page work and content: titles, headings, internal linking,
+                structured data, and pages written to answer one question
+                cleanly. Local SEO and link building where they apply.
+              </p>
+            </li>
+
+            <li>
+              <p className="text-sm font-medium tabular-nums text-accent">05</p>
+              <h3 className="mt-2 text-base font-semibold text-foreground">
+                Measure
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-2">
+                Search Console and GA4, reviewed against what changed and when.
+                If something is not working I will say so rather than reframe it.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      {/* SECTION 9: ABOUT IGEL */}
       <section className="relative py-16 sm:py-20">
         <div className="container-shell">
           <div className="glass-card rounded-2xl border border-border-strong p-8 sm:p-10">
-            <p className="text-sm font-medium uppercase tracking-widest text-accent">
-              AI Search Optimization
-            </p>
+            <p className={eyebrowClass}>About</p>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Ranking is no longer the whole job.
-            </h2>
+            <h2 className={h2Class}>About Igel.</h2>
 
-            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-              A growing share of searches now end inside an answer rather than on
-              a results page. Google AI Overviews summarise and cite. ChatGPT
-              Search synthesises from a handful of sources. Voice assistants read
-              one response aloud. If your page is not readable and extractable by
-              those systems, you can rank well and still be invisible at the
-              moment someone is deciding.
-            </p>
+            <div className="mt-8 grid gap-10 lg:grid-cols-5">
+              <div className="space-y-5 lg:col-span-3">
+                <p className="leading-relaxed text-muted">
+                  I am Igel Cudiera, an SEO specialist based in Medellin, Cebu. I
+                  studied computer programming and hardware servicing at Cebu
+                  Normal University and came to SEO from that side rather than
+                  from marketing, which is why the technical layer is where I
+                  start. It is a habit that has been useful: a lot of what has
+                  actually moved client numbers has been unglamorous, like
+                  finding a robots.txt rule blocking pages that mattered, or
+                  consolidating four blog posts that were splitting the same
+                  ranking signal four ways.
+                </p>
 
-            <div className="mt-8 grid gap-8 md:grid-cols-3">
-              <div>
-                <h3 className="text-base font-semibold text-foreground">
-                  AIO: the foundation
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-2">
-                  Making a whole site discoverable to AI crawlers and retrieval
-                  systems, through clean technical health, clear structure, and
-                  content that is unambiguous about what it covers.
+                <p className="leading-relaxed text-muted">
+                  My first SEO client was in March 2023, a flower and bouquet
+                  shop with no website at all, which I built on WordPress and set
+                  up properly from the start. Since then: an iGaming site in
+                  South Korea, two years running full-cycle SEO across a
+                  multi-industry agency portfolio, and a Northern Virginia real
+                  estate team. Most of that work has been dental and real estate.
+                </p>
+
+                <p className="leading-relaxed text-muted">
+                  I speak English, Tagalog and Cebuano, and I work remotely with
+                  clients in the US and elsewhere.
+                </p>
+
+                <p className="text-sm leading-relaxed text-muted-2">
+                  All five{" "}
+                  <Link href="/certifications" className={linkClass}>
+                    certificates
+                  </Link>{" "}
+                  are viewable in full, and the{" "}
+                  <Link href="/experience" className={linkClass}>
+                    role by role record
+                  </Link>{" "}
+                  names every account.
                 </p>
               </div>
 
-              <div>
-                <h3 className="text-base font-semibold text-foreground">
-                  AEO: the format
+              <div className="lg:col-span-2">
+                <h3 className="text-sm font-semibold uppercase tracking-widest text-accent">
+                  Training and education
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-2">
-                  Self-contained answers near the top of a page, question-shaped
-                  headings, and valid FAQ schema, so a system can lift a complete
-                  response without guesswork.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-base font-semibold text-foreground">
-                  GEO: the entity
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-2">
-                  Entity clarity and outside corroboration. Generative engines
-                  cross-reference several sources before citing one, so consistent
-                  naming, structured data, and third-party mentions matter as much
-                  as on-page work.
-                </p>
+                <ul className="mt-5 space-y-4">
+                  {credentials.map((credential) => (
+                    <li
+                      key={credential.detail}
+                      className="border-l border-border-strong pl-4"
+                    >
+                      <p className="text-xs font-medium uppercase tracking-wider text-muted-2">
+                        {credential.kind}
+                      </p>
+                      <p className="mt-1 text-sm leading-relaxed text-muted">
+                        {credential.detail}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-
-            <p className="mt-8 max-w-3xl leading-relaxed text-muted">
-              I use AI in the workflow too, drafting outlines, stress-testing
-              angles, and checking coverage, but every piece gets edited for
-              accuracy, voice, and intent before it goes live. Raw generated
-              content reads like raw generated content, and search systems are
-              getting better at noticing.
-            </p>
-
-            <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-2">
-              One honest caveat: nobody controls what an AI system decides to
-              cite, and anyone promising a guaranteed spot in AI Overviews or a
-              guaranteed mention in ChatGPT is selling something they cannot
-              deliver. What can be improved is the quality, structure, technical
-              accessibility, and entity clarity of your content, which is what
-              makes citation more likely when the opportunity comes up.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Internal CTA */}
+      {/* SECTION 10: TOOLS */}
       <section className="relative py-16 sm:py-20">
         <div className="container-shell">
-          <div className="rounded-2xl border border-border bg-white/[0.03] p-8 sm:p-10">
+          <p className={eyebrowClass}>Tools</p>
+
+          <h2 className={h2Class}>What I use.</h2>
+
+          <p className="mt-6 max-w-3xl leading-relaxed text-muted">
+            Ahrefs and SEMrush for research and competitor analysis. Screaming
+            Frog for crawling at scale. Google Search Console and GA4 for what
+            actually happened. Looker Studio for reporting. WordPress, Shopify
+            and Duda for implementation. Google Business Profile, Google Ads and
+            Meta Ads Manager for the rest.
+          </p>
+
+          <ul className="mt-8 flex flex-wrap gap-2.5">
+            {tools.map((tool) => (
+              <li
+                key={tool}
+                className="rounded-full border border-border px-4 py-2 text-sm text-muted-2"
+              >
+                {tool}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* SECTION 11: WAYS TO WORK TOGETHER */}
+      <section className="relative py-16 sm:py-20">
+        <div className="container-shell">
+          <p className={eyebrowClass}>Engagement</p>
+
+          <h2 className={h2Class}>Ways to work together.</h2>
+
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
+            Three ways this usually starts.
+          </p>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+            <div className="glass-card rounded-2xl border border-border-strong p-8">
+              <h3 className="text-lg font-semibold text-foreground">
+                A one-time technical audit
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted">
+                The lowest-risk way to find out whether working together makes
+                sense. You get a prioritised list of what is actually blocking
+                the site, with the reasoning, and you can hand it to anyone. Most
+                sites I audit have between three and six issues that matter and a
+                long tail that does not.
+              </p>
+            </div>
+
+            <div className="glass-card rounded-2xl border border-border-strong p-8">
+              <h3 className="text-lg font-semibold text-foreground">
+                Ongoing SEO
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted">
+                Monthly work across technical, on-page, local and off-page,
+                scoped to what the site needs. Pricing is built around scope
+                rather than a package, because a single-location dental practice
+                needing local SEO and an e-commerce store needing technical plus
+                content work are not the same amount of effort.
+              </p>
+            </div>
+
+            <div className="glass-card rounded-2xl border border-border-strong p-8">
+              <h3 className="text-lg font-semibold text-foreground">
+                A full-time role
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted">
+                I am open to full-time SEO positions, remote or Cebu-based. The{" "}
+                <a href="/resume/Igel-Cudiera-Resume.pdf" className={linkClass}>
+                  resume
+                </a>{" "}
+                covers the role by role detail, and{" "}
+                <Link href="/experience" className={linkClass}>
+                  the experience page
+                </Link>{" "}
+                has the same record with the accounts named.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-2xl leading-relaxed text-muted-2">
+              After you send a message I reply within 24 hours. The first reply
+              is an honest read on what is realistic for your site, not a
+              proposal deck.
+            </p>
+            <Link href="/contact" className={buttonPrimaryClass}>
+              Start with an audit
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 12: FAQ */}
+      <section className="relative py-16 sm:py-20">
+        <div className="container-shell">
+          <p className={eyebrowClass}>FAQ</p>
+
+          <h2 className={h2Class}>
+            Questions worth asking before you hire anyone.
+          </h2>
+
+          <div className="mt-12 divide-y divide-border border-y border-border">
+            {faqs.map((faq) => (
+              <details key={faq.question} className="group py-6">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-lg font-semibold text-foreground transition-colors hover:text-accent-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                  <span>{faq.question}</span>
+                  <span
+                    aria-hidden="true"
+                    className="mt-1 shrink-0 text-accent transition-transform group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 max-w-3xl leading-relaxed text-muted">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 13: FINAL CTA */}
+      <section className="relative py-20 sm:py-24">
+        <div className="container-shell">
+          <div className="rounded-2xl border border-border bg-white/[0.03] p-8 sm:p-12">
             <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              Have a look around before you decide.
+              Tell me what you are trying to rank for.
             </h2>
 
             <p className="mt-4 max-w-2xl leading-relaxed text-muted">
-              You should not have to take a stranger&rsquo;s word for it. The work
-              is documented: where I have worked, what I actually did, and what
-              came of it. Scope and pricing get built around what your site needs
-              rather than a fixed package, and a one-time technical audit is
-              usually the lowest-risk way to find out whether working together
-              makes sense.
+              Send me your domain and the searches you want to win. You will get
+              an honest read on what is realistic and what it would take, usually
+              within 24 hours. No sales sequence, no proposal deck.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {ctaLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="rounded-full border border-border-strong px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent-light"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <Link href="/contact" className={buttonPrimaryClass}>
+                Send me your site
+              </Link>
+              <Link href="/case-studies" className={buttonSecondaryClass}>
+                See the client results
+              </Link>
             </div>
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </>
   );
 }
