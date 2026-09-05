@@ -21,11 +21,6 @@ interface Credential {
   detail: string;
 }
 
-interface Faq {
-  question: string;
-  answer: string;
-}
-
 /* ------------------------------------------------------------------ */
 /* Data                                                                */
 /* ------------------------------------------------------------------ */
@@ -143,49 +138,6 @@ const tools: string[] = [
   "Google Ads",
   "Meta Ads Manager",
 ];
-
-const faqs: Faq[] = [
-  {
-    question: "Do you work with businesses outside Cebu?",
-    answer:
-      "Most of my client work has been in the United States, so yes. I am based in Cebu and work remotely, and the working day is already built around US hours. For clients in Cebu or elsewhere in the Philippines, meetings run on your schedule.",
-  },
-  {
-    question: "What does it cost?",
-    answer:
-      "It depends on scope, which is not a dodge so much as the actual answer. A single-location practice needing local SEO and an e-commerce store needing technical plus content work require very different amounts of work. A one-time technical audit is the cheapest way in and the fastest way to find out whether a longer engagement makes sense.",
-  },
-  {
-    question: "How long before I see anything?",
-    answer:
-      "Most campaigns show measurable movement in three to six months, with the compounding results usually between six and twelve. Local SEO moves faster, because Google Business Profile and citation work can affect map pack visibility within weeks. Sites with real technical problems need those fixed first, which adds time at the front. In my own case studies the range has been wide: a flower shop with no prior web presence had indexed, search-visible pages within weeks of setup, while the dental accounts were sustained programs measured over months.",
-  },
-  {
-    question: "Do I work with you or a team?",
-    answer:
-      "Me. There is no team. That is the main advantage and also the main limit: you get one accountable person from audit through reporting, and I can only take on a certain number of accounts at once without the quality dropping.",
-  },
-  {
-    question: "Can you guarantee I will show up in Google AI Overviews?",
-    answer:
-      "No, and neither can anyone else. Google does not publish how AI Overviews select sources and the selection changes. What can be improved is whether your content is structured, technically accessible, and clear enough about what your business is for a system to pick it up. That has worked repeatedly across client accounts, which is different from a guarantee.",
-  },
-  {
-    question: "What do you need from me to start?",
-    answer:
-      "The domain, the searches you want to win, and Search Console and Analytics access when you are ready. That is enough for a first read. If you do not have Search Console set up, that is one of the first things I would fix anyway.",
-  },
-];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
-  })),
-};
 
 /* ------------------------------------------------------------------ */
 /* Shared class tokens                                                 */
@@ -874,37 +826,7 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* SECTION 12: FAQ */}
-      <section className="relative py-16 sm:py-20">
-        <div className="container-shell">
-          <p className={eyebrowClass}>FAQ</p>
-
-          <h2 className={h2Class}>
-            Questions worth asking before you hire anyone.
-          </h2>
-
-          <div className="mt-12 divide-y divide-border border-y border-border">
-            {faqs.map((faq) => (
-              <details key={faq.question} className="group py-6">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-lg font-semibold text-foreground transition-colors hover:text-accent-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
-                  <span>{faq.question}</span>
-                  <span
-                    aria-hidden="true"
-                    className="mt-1 shrink-0 text-accent transition-transform group-open:rotate-45"
-                  >
-                    +
-                  </span>
-                </summary>
-                <p className="mt-4 max-w-3xl leading-relaxed text-muted">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 13: FINAL CTA */}
+      {/* SECTION 12: FINAL CTA */}
       <section className="relative py-20 sm:py-24">
         <div className="container-shell">
           <div className="rounded-2xl border border-border bg-white/[0.03] p-8 sm:p-12">
@@ -929,11 +851,6 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
     </>
   );
 }
