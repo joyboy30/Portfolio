@@ -79,7 +79,7 @@ export function Certifications({ showHeading = true }: { showHeading?: boolean }
               exit={{ opacity: 0, scale: 0.95, y: 12 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="glass-card relative max-h-[85vh] w-full max-w-3xl overflow-hidden"
+              className="glass-card relative max-h-[90vh] w-full max-w-3xl overflow-y-auto"
             >
               <button
                 onClick={() => setActive(null)}
