@@ -12,6 +12,7 @@ import {
   Search,
   TrendingUp,
   MapPin,
+  Award,
 } from "lucide-react";
 
 import { heroStats, industries } from "@/lib/data";
@@ -20,7 +21,9 @@ import { siteConfig } from "@/lib/site-config";
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
+
   const inView = useInView(ref, { once: true, margin: "-40px" });
+
   const [display, setDisplay] = useState(0);
 
   useEffect(() => {
@@ -72,6 +75,7 @@ export function Hero() {
             className="eyebrow"
           >
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-accent" />
+
             Available for projects, part-time and full-time roles
           </motion.div>
 
@@ -98,13 +102,13 @@ export function Hero() {
             }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-muted"
           >
-            I work with dental practices, real estate, business brokers, e-commerce
-            stores and local service businesses, mostly in the US and Canada. 
-            My background is in Computer Programming and
-            Hardware Servicing, so I start with whether a site can actually
-            be crawled, indexed and understood before touching content. Scroll
-            down and you will find client names, traffic figures, the periods
-            they cover, and where the data came from.
+            I work with dental practices, real estate, business brokers,
+            e-commerce stores and local service businesses, mostly in the US
+            and Canada. My background is in Computer Programming and Hardware
+            Servicing, so I start with whether a site can actually be crawled,
+            indexed and understood before touching content. Scroll down and you
+            will find client names, traffic figures, the periods they cover,
+            and where the data came from.
           </motion.p>
 
           <motion.div
@@ -122,13 +126,25 @@ export function Hero() {
               <ArrowUpRight className="h-4 w-4" />
             </a>
 
+            <a
+              href="https://sovatalents.com/talent/igel-cudiera/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
+              <Award className="h-4 w-4 text-accent-light" />
+              PinoySEO Certified
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+
             <a href="/case-studies" className="btn-secondary">
               See the client results{" "}
               <ArrowUpRight className="h-4 w-4" />
             </a>
 
             <a href={siteConfig.resumeUrl} download className="btn-secondary">
-              <Download className="h-4 w-4" /> Download Resume
+              <Download className="h-4 w-4" />
+              Download Resume
             </a>
           </motion.div>
 
