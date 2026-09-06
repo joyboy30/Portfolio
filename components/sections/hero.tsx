@@ -98,10 +98,10 @@ export function Hero() {
             }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-muted"
           >
-            I work with dental practices, real estate teams, e-commerce
-            stores and local service businesses, mostly in the US, from Cebu
-            in the Philippines. My background is in computer programming and
-            hardware servicing, so I start with whether a site can actually
+            I work with dental practices, real estate, business brokers, e-commerce
+            stores and local service businesses, mostly in the US and Canada. 
+            My background is in Computer Programming and
+            Hardware Servicing, so I start with whether a site can actually
             be crawled, indexed and understood before touching content. Scroll
             down and you will find client names, traffic figures, the periods
             they cover, and where the data came from.
