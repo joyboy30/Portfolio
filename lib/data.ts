@@ -361,37 +361,45 @@ export const certifications: Certification[] = [
     title: "Online SEO Bootcamp",
     issuer: "Pinoy SEO",
     date: "May 2023",
-    image: "/certificates/pinoy-seo-certificate.jpg",
+    image: "/certificates/pinoy-seo-certificate.webp",
     description: "Foundational SEO training covering core on-page SEO and off-page SEO principles.",
   },
   {
     title: "SEO Sprint",
     issuer: "SEO Workout",
     date: "2025 · 15+ hours",
-    image: "/certificates/seo-sprint-certificate.jpg",
+    image: "/certificates/seo-sprint-certificate.webp",
     description: "Intensive, applied SEO sprint covering SEO audits, SEO strategy, and hands-on execution.",
   },
   {
     title: "Technical SEO",
     issuer: "SEO Workout",
     date: "2025 · 15+ hours",
-    image: "/certificates/technical-seo-certificate.jpg",
+    image: "/certificates/technical-seo-certificate.webp",
     description: "Deep technical SEO training: crawlability, indexability, site health, and Core Web Vitals.",
   },
   {
     title: "Google Ads Training",
     issuer: "Inspired Filipino Freelancers",
     date: "September 2023",
-    image: "/certificates/google-ads-certificate.jpg",
+    image: "/certificates/google-ads-certificate.webp",
     description: "Two-day Google Ads training as part of a Virtual Assistant Skills Enhancement Program.",
   },
   {
     title: "Facebook Ads Management",
     issuer: "ProVA Virtual Assistant",
     date: "November 2023",
-    image: "/certificates/meta-ads-certificate.jpg",
+    image: "/certificates/meta-ads-certificate.webp",
     description:
       "Ads structure, Ads Manager, campaign types, budgeting, split testing/scaling, and retargeting for lead generation.",
+  },
+  {
+    title: "Digital Marketing VA",
+    issuer: "Margin Momentum",
+    date: "August 2026",
+    image: "/certificates/margin-momentum-certificate.webp",
+    description:
+      "Completed a practical systems-based program focused on building and positioning a digital marketing VA career. The training covered niche clarity, proof of skill, portfolio development, platform positioning, digital presence, proposal systems, and client acquisition. Completed all required labs, including developing a niche, building a portfolio and professional profiles, creating a proposal system, and following a 30-day client acquisition framework.",
   },
 ];
 

@@ -178,7 +178,7 @@ export function Hero() {
           <div className="glass-card group relative overflow-hidden p-3 shadow-glass">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.4rem]">
               <Image
-                src="/images/profile-photo.jpg"
+                src="/images/profile-photo.webp"
                 alt="Igel G. Cudiera — SEO Specialist"
                 fill
                 priority

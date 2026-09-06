@@ -70,7 +70,7 @@ export default function AboutPage() {
 
                   <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-surface shadow-glass">
                     <Image
-                      src="/images/igel-cudiera.png"
+                      src="/images/igel-cudiera.webp"
                       alt="Igel Cudiera, SEO Expert in the Philippines"
                       width={800}
                       height={1000}
