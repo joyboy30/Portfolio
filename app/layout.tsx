@@ -1,8 +1,17 @@
 import type { Metadata, Viewport } from "next";
+
 import { Manrope, Sora, JetBrains_Mono } from "next/font/google";
+
 import "./globals.css";
+
 import { siteConfig } from "@/lib/site-config";
-import { personSchema, websiteSchema, organizationSchema } from "@/lib/schema";
+
+import {
+  personSchema,
+  websiteSchema,
+  organizationSchema,
+} from "@/lib/schema";
+
 import { Header } from "@/components/header";
 
 const sora = Sora({
@@ -34,14 +43,25 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.name}`,
   },
+
   description: siteConfig.description,
+
   keywords: siteConfig.keywords,
-  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+
+  authors: [
+    {
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+  ],
+
   creator: siteConfig.name,
+
   alternates: {
     canonical: "/",
   },
@@ -51,11 +71,13 @@ export const metadata: Metadata = {
     google: "ggFCVRED77Nke9kkUQexr1HqC2RluDtXlKG3q6aYYiE",
   },
 
+  // Keep the portfolio publicly accessible but prevent search-engine indexing.
   robots: {
-    index: true,
+    index: false,
     follow: true,
+
     googleBot: {
-      index: true,
+      index: false,
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -70,6 +92,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     siteName: siteConfig.name,
     description: siteConfig.description,
+
     images: [
       {
         url: "/opengraph-image",
@@ -93,7 +116,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = [personSchema(), websiteSchema(), organizationSchema()];
+  const jsonLd = [
+    personSchema(),
+    websiteSchema(),
+    organizationSchema(),
+  ];
 
   return (
     <html
@@ -116,7 +143,9 @@ export default function RootLayout({
           <script
             key={i}
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
           />
         ))}
       </body>
